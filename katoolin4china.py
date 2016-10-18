@@ -129,11 +129,11 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
 1) Information Gathering            8) Exploitation Tools
 2) Vulnerability Analysis           9) Forensics Tools
-3) Wireless Attacks             10) Stress Testing
-4) Web Applications             11) Password Attacks
+3) Wireless Attacks                 10) Stress Testing
+4) Web Applications                 11) Password Attacks
 5) Sniffing & Spoofing              12) Reverse Engineering
 6) Maintaining Access               13) Hardware Hacking
-7) Reporting Tools              14) Extra
+7) Reporting Tools                  14) Extra
                                     
 0) All
 
