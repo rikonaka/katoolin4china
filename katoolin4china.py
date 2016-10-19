@@ -30,7 +30,7 @@ def main():
                                                     \______/   \_/  \_/   \_/   \_/ \__/  \_______|  \033[1;31m
 
  \033[1;32m+ -- -- +=[ OriginAuthor: LionSec | Homepage: www.lionsec.net\033[1;m
- \033[1;32m+ -- -- +=[ RemixAuthor: SuperSuperSuperSuper5 | Homepage:https:https://github.com/SuperSuperSuperSuper5\033[1;m
+ \033[1;32m+ -- -- +=[ RemixAuthor: SuperSuperSuperSuper5 | Homepage:https://github.com/SuperSuperSuperSuper5\033[1;m
  \033[1;32m+ -- -- +=[ 331 Tools \033[1;m
 
 
@@ -42,11 +42,14 @@ def main():
             while True:
 
                 print ('''
-1) Add Kali repositories & Update 
-2) View Categories
-3) Install classicmenu indicator
-4) Install Kali menu
-5) Help
+ _________
+| 1 floor |
+
+1) Add Kali repositories & Update      (RemixAuthorSay: add the tuna repositories and update source file)
+2) View Categories                     (RemixAuthorSay: show the kali tool menu)
+3) Install classicmenu indicator       (RemixAuthorSay: not recommand for new user)
+4) Install Kali menu                   (RemixAuthorSay: not recommand for new user)
+5) Help                                (RemixAuthorSay: as you see)
 
             ''')
 
@@ -54,10 +57,13 @@ def main():
             
                 while opcion0 == "1":
                     print ('''
-1) Add kali linux repositories
-2) Update
-3) Remove all kali linux repositories
-4) View the contents of sources.list file
+ _________
+| 2 floor |
+
+1) Add kali linux repositories                 (RemixAuthorSay: echo the tuna to /etc/apt/sources.list)
+2) Update                                      (RemixAuthorSay: execute the sudo apt-get update)
+3) Remove all kali linux repositories          (RemixAuthorSay: remove the kali repositories)
+4) View the contents of sources.list file      (RemixAuthorSay: show the sources.list)
 
                     ''')
 
@@ -123,12 +129,12 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                         cmd1 = os.system("apt-get install kali-menu")
                 elif opcion0 == "5":
                     print (''' 
-****************** +Commands+ ******************
+\033[1;32m  |Commands|\033[1;m---\033[1;33m|Meaning|\033[1;m
 
 
-\033[1;32mback\033[1;m  \033[1;33mGo back\033[1;m
+\033[1;32m   back\033[1;m  \033[1;33m     ---Go back\033[1;m
 
-\033[1;32mgohome\033[1;m    \033[1;33mGo to the main menu\033[1;m
+\033[1;32m   gohome\033[1;m    \033[1;33m ---Go to the main menu\033[1;m
 
         ''')
 
@@ -136,6 +142,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                 def inicio():
                     while opcion0 == "2":
                         print ('''
+ _________
+| 3 floor |
+
 \033[1;36m**************************** All Categories *****************************\033[1;m
 
 1) Information Gathering            8) Exploitation Tools
