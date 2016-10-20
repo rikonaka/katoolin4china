@@ -15,7 +15,7 @@ def main():
  $$  $$<    $$$$$$$ |  \033[1;36mKali linux tools installer\033[1;m |$$ |$$ |$$ |  $$ |
  \033[1;36m$$ |\$$\  $$  __$$ |  $$ |$$\ $$ |  $$ |$$ |  $$ |$$ |$$ |$$ |  $$ |
  $$ | \$$\ \$$$$$$$ |  \$$$$  |\$$$$$$  |\$$$$$$  |$$ |$$ |$$ |  $$ |
- \__|  \__| \_______|   \____/  \______/  \______/ \__|\__|\__|  \__| V1.1 for China\033[1;m
+ \__|  \__| \_______|   \____/  \______/  \______/ \__|\__|\__|  \__| V1.2\033[1;m
  
  
                $$$\                              $$$$$$$$$$\  $$\        $$\  
@@ -45,11 +45,11 @@ def main():
  _________
 | 1 floor |
 
-1) Add Kali repositories & Update      (RemixAuthorSay: add the tuna repositories and update source file)
-2) View Categories                     (RemixAuthorSay: show the kali tool menu)
-3) Install classicmenu indicator       (RemixAuthorSay: not recommand for new user)
-4) Install Kali menu                   (RemixAuthorSay: not recommand for new user)
-5) Help                                (RemixAuthorSay: as you see)
+1) Add Kali repositories & Update      (add the tuna repositories and update source file)
+2) View Categories                     (show the kali tool menu)
+3) Install classicmenu indicator       (not recommand for new user)
+4) Install Kali menu                   (not recommand for new user)
+5) Help                                (as you see)
 
             ''')
 
@@ -60,12 +60,14 @@ def main():
  _________
 | 2 floor |
 
-1) Add kali linux repositories                 (RemixAuthorSay: echo the tuna to /etc/apt/sources.list)
-2) Update                                      (RemixAuthorSay: execute the sudo apt-get update)
-3) Remove all kali linux repositories          (RemixAuthorSay: remove the kali repositories)
-4) View the contents of sources.list file      (RemixAuthorSay: show the sources.list)
+1) Add kali linux repositories                 (echo the tuna to /etc/apt/sources.list)
+2) Update                                      (execute the sudo apt-get update)
+3) Remove all kali linux repositories          (remove the kali repositories)
+4) View the contents of sources.list file      (show the sources.list)
 
                     ''')
+                    
+                    print("\033[1;32Suggest 1 -> 1 -> 2 -> back -> 2 -> 0\033[1;m")
 
                     repo = raw_input("\033[1;32mWhat do you want to do ?> \033[1;m")
 
@@ -148,7 +150,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                     while opcion0 == "2":
                         print ('''
  _________
-| 3 floor |
+| 2 floor |
 
 \033[1;36m**************************** All Categories *****************************\033[1;m
 
@@ -181,6 +183,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
                         while opcion1 == "1":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Information Gathering\033[1;m
 
  1) acccheck                    30) lbd
@@ -347,6 +352,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
                         while opcion1 == "2":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Vulnerability Analysis\033[1;m
 
  1) BBQSQL                          18) Nmap
@@ -456,6 +464,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
                         while opcion1 == "3":
                             print ('''
+ _________
+| 3 floor |
+
         \033[1;36m=+[ Wireless Attacks\033[1;m
 
  1) Aircrack-ng             17) kalibrate-rtl
@@ -554,6 +565,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
                         while opcion1 == "4":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Web Applications\033[1;m
 
  1) apache-users            21) Parsero
@@ -656,7 +670,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "34":
                                 cmd = os.system("apt-get install webscarab")
                             elif opcion2 == "35":
-                                print ("Webshag is unavailable")
+                                print ('Webshag is unavailable')
                             elif opcion2 == "36":
                                 cmd = os.system("apt-get install git && git clone git://git.kali.org/packages/webslayer.git")
                             elif opcion2 == "37":
@@ -679,6 +693,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
                         while opcion1 == "5":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Sniffing & Spoofing\033[1;m
 
  1) Burp Suite              17) rtpmixsound
@@ -782,6 +799,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
                         while opcion1 == "6":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Maintaining Access\033[1;m
 
  1) CryptCat
@@ -850,6 +870,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
                         while opcion1 == "7":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Reporting Tools\033[1;m
 
 1) CaseFile
@@ -898,6 +921,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
                         while opcion1 == "8":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Exploitation Tools\033[1;m
 
  1) Armitage
@@ -970,6 +996,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
                         while opcion1 == "9":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Forensics Tools\033[1;m
 
  1) Binwalk                 11) extundelete
@@ -1034,7 +1063,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "20":
                                 cmd = os.system("apt-get install peepdf")
                             elif opcion2 == "21":
-                                print ("Regripper is unavailable")
+                                print ('Regripper is unavailable')
                             elif opcion2 == "22":
                                 cmd = os.system("apt-get install volatility")
                             elif opcion2 == "23":
@@ -1049,6 +1078,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
                         while opcion1 == "10":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Stress Testing\033[1;m
 
  1) DHCPig
@@ -1111,6 +1143,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
                         while opcion1 == "11":
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Password Attacks\033[1;m
 
  1) acccheck                19) Maskprocessor
@@ -1198,7 +1233,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "29":
                                 cmd = os.system("apt-get install rsmangler")
                             elif opcion2 == "30":
-                                print ("Sqldict is unavailable")
+                                print ('Sqldict is unavailable')
                             elif opcion2 == "31":
                                 cmd = os.system("apt-get install statsprocessor")
                             elif opcion2 == "32":
@@ -1221,6 +1256,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
                         while opcion1 == "12" :
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Reverse Engineering\033[1;m
 
  1) apktool
@@ -1274,6 +1312,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
                         while opcion1 == "13" :
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Hardware Hacking\033[1;m
 
  1) android-sdk
@@ -1313,6 +1354,9 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
                         while opcion1 == "14" :
                             print ('''
+ _________
+| 3 floor |
+
 \033[1;36m=+[ Extra\033[1;m
 
 1) Wifresti
