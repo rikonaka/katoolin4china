@@ -1,4 +1,4 @@
-![katoolin](https://github.com/SuperSuperSuperSuper5/katoolin4china/blob/master/pic/1.png)
+![katoolin](https://github.com/SuperSuperSuperSuper5/katoolin4china/blob/master/pic/2.png)
 # katoolin
 Automatically install all Kali linux tools
 
