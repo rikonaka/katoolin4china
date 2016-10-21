@@ -1,5 +1,5 @@
 ![katoolin](https://github.com/SuperSuperSuperSuper5/katoolin4china/blob/master/pic/2.png)
-# katoolin
+# katoolin for China
 Automatically install all Kali linux tools for Chinese user
 
 # Features
