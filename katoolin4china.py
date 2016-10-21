@@ -4,6 +4,9 @@ import os
 import sys, traceback
 
 def main():
+    
+    cmd1 = os.system("apt-key adv --keyserver pgp.mit.edu --recv-keys ED444FF07D8D0BF6")
+    cmd2 = os.system("echo '# Kali linux repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list")
 
     try:
         print ('''
@@ -45,7 +48,7 @@ def main():
  _________
 | 1 floor |
 
-1) Add Kali repositories & Update      (add the tuna repositories and update source file)
+1) Kali linux repositories setting     (add the tuna repositories and update source file)
 2) View Categories                     (show the kali tool menu)
 3) Install classicmenu indicator       (not recommand for new user)
 4) Install Kali menu                   (not recommand for new user)
@@ -60,10 +63,9 @@ def main():
  _________
 | 2 floor |
 
-1) Add kali linux repositories                 (echo the tuna to /etc/apt/sources.list)
-2) Update                                      (execute the sudo apt-get update)
-3) Remove all kali linux repositories          (remove the kali repositories)
-4) View the contents of sources.list file      (show the sources.list)
+1) Update                                      (execute the sudo apt-get update)
+2) Remove all kali linux repositories          (remove the kali repositories)
+3) View the contents of sources.list file      (show the sources.list)
 
                     ''')
                     
@@ -72,13 +74,9 @@ def main():
                     repo = raw_input("\033[1;32mWhat do you want to do ?> \033[1;m")
 
                     if repo == "1":
-                        cmd1 = os.system("apt-key adv --keyserver pgp.mit.edu --recv-keys ED444FF07D8D0BF6")
-                        cmd2 = os.system("echo '# Kali linux repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list")
+                        cmd1 = os.system("apt-get update -m")
 
                     elif repo == "2":
-                        cmd3 = os.system("apt-get update -m")
-
-                    elif repo == "3":
                         infile = "/etc/apt/sources.list"
                         outfile = "/etc/apt/sources.list"
 
@@ -100,7 +98,7 @@ def main():
                     elif repo == "gohome":
                         inicio1()
 
-                    elif repo == "4":
+                    elif repo == "3":
                         file = open('/etc/apt/sources.list', 'r')
 
                         print (file.read())
