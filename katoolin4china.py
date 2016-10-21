@@ -53,6 +53,7 @@ def main():
 3) Install classicmenu indicator       (not recommand for new user)
 4) Install Kali menu                   (not recommand for new user)
 5) Help                                (as you see)
+6) Quit                                (quit the programer)
 
             ''')
 
@@ -68,8 +69,6 @@ def main():
 3) View the contents of sources.list file      (show the sources.list)
 
                     ''')
-                    
-                    print("\033[1;32Suggest 1 -> 1 -> 2 -> back -> 2 -> 0\033[1;m")
 
                     repo = raw_input("\033[1;32mWhat do you want to do ?> \033[1;m")
 
@@ -142,6 +141,22 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 \033[1;31m+++++++++++++++++++++++++++++++++++++++++++\033[1;m
 
         ''')
+                elif opcion0 = "6":
+                    infile = "/etc/apt/sources.list"
+                    outfile = "/etc/apt/sources.list"
+
+                    delete_list = ["# Kali linux repositories | Added by Katoolin\n", "deb http://http.kali.org/kali kali-rolling main contrib non-free\n"]
+                    fin = open(infile)
+                    os.remove("/etc/apt/sources.list")
+                    fout = open(outfile, "w+")
+                    for line in fin:
+                        for word in delete_list:
+                            line = line.replace(word, "")
+                        fout.write(line)
+                    fin.close()
+                    fout.close()
+                    print ("\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m")
+                    os._exit(0)
 
 
                 def inicio():
