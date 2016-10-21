@@ -141,7 +141,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 \033[1;31m+++++++++++++++++++++++++++++++++++++++++++\033[1;m
 
         ''')
-                elif opcion0 = "6":
+                elif opcion0 == "6":
                     infile = "/etc/apt/sources.list"
                     outfile = "/etc/apt/sources.list"
 
