@@ -181,9 +181,10 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             kt_count = 1
                             kt_len = len(kalitool)
                             for kt in kalitool:
-                                print ("\033[1;36mapt-get -f -y install\033[1;m \033[1;32m%s        %d / %d\033[1;m" % (kt, kt_count, kt_len))
-                                if not (os.system("\033[1;31mapt-get -f -y install %s\033[1;m" % kt)):
-                                    print ("Install \033[1;31m%s\033[1;m is failed" % kt)
+                                print ("\033[1;36mi\Install\033[1;m \033[1;32m%s        %d / %d\033[1;m" % (kt, kt_count, kt_len))
+                                cmd = os.system("apt-get -f -y install %s" % kt)
+                                if not cmd:
+                                    print ("The system return \033[1;31m%d\033[1;m" % cmd)
                                 kt_count += 1
                             cmd = os.system("wget http://www.morningstarsecurity.com/downloads/bing-ip2hosts-0.4.tar.gz && tar -xzvf bing-ip2hosts-0.4.tar.gz && cp bing-ip2hosts-0.4/bing-ip2hosts /usr/local/bin/")
 
@@ -354,9 +355,11 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
                                 for ig in IG_list:
 
-                                    if not cmd1 = os.system("apt-get install -y %s" % ig):
+                                    cmd1 = os.system("apt-get install -y %s" % str(ig))
 
-                                        print ("Install \033[1;31m%s\033[1;m is failed" % ig)
+                                    if not cmd1:
+
+                                        print ("The system return \033[1;31m%d\033[1;m" % cmd1)
 
                                 cmd2 = os.system("wget http://www.morningstarsecurity.com/downloads/bing-ip2hosts-0.4.tar.gz && tar -xzvf bing-ip2hosts-0.4.tar.gz && cp bing-ip2hosts-0.4/bing-ip2hosts /usr/local/bin/")
                             else:
@@ -475,7 +478,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 VA_list = ["bbqsql","bed","cisco-auditing-tool","cisco-global-exploiter","cisco-ocs","cisco-torch","copy-router-config","doona","dotdotpwn","greenbone-security-assistant","hexorbase","jsql","lynis","nmap","ohrwurm","openvas-cli","openvas-manager","openvas-scanner","oscanner","powerfuzzer","sfuzz","sidguesser","siparmyknife","sqlmap","sqlninja","sqlsus","thc-ipv6","tnscmd10g","unix-privesc-check","yersinia"]
 
                                 for va in VA_list:
-                                    if not cmd = os.system("apt-get install -y %s" % va):
+                                    cmd = os.system("apt-get install -y %s" % str(va))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % va)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -577,7 +581,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 WA_list = ["aircrack-ng","asleap","bluelog","blueranger","bluesnarfer","bully","cowpatty","crackle","eapmd5pass","fern-wifi-cracker","ghost-phisher","giskismet","gqrx","kalibrate-rtl","killerbee","kismet","mdk3","mfcuk","mfoc","mfterm","multimon-ng","pixiewps","reaver","redfang","spooftooph","wifi-honey","wifitap","wifite"]
 
                                 for wa in WA_list:
-                                    if not cmd = os.system("apt-get install -y %s" % wa):
+                                    cmd = os.system("apt-get install -y %s" % str(wa))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % wa)
                             elif opcion2 == "back":
                                 inicio()
@@ -712,7 +717,11 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 WA_list_1 = ["apache-users","arachni","bbqsql","blindelephant","burpsuite","cutycapt","davtest","deblaze","dirb","dirbuster","fimap","funkload","grabber","jboss-autopwn","joomscan","jsql","maltego-teeth","padbuster","paros","parsero","plecost","powerfuzzer","proxystrike","recon-ng","skipfish","sqlmap","sqlninja","sqlsus","ua-tester","uniscan","vega","w3af","webscarab","websploit","wfuzz","wpscan","xsser","zaproxy"]
                                 for wa1 in WA_list_1:
-                                    if not cmd = os.system("apt-get install -y %s" % wa1):
+                                    
+                                    cmd = os.system("apt-get install -y %s" % str(wa1))
+                                    
+                                    if not cmd:
+                                        
                                         print ("Install \033[1;31m%s\033[1;m is failed" % wa1)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -818,7 +827,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 SS_list = ["burpsuite","dnschef","fiked","hamster-sidejack","hexinject","iaxflood","inviteflood","ismtp","mitmproxy","ohrwurm","protos-sip","rebind","responder","rtpbreak","rtpinsertsound","rtpmixsound","sctpscan","siparmyknife","sipp","sipvicious","sniffjoke","sslsplit","sslstrip","thc-ipv6","voiphopper","webscarab","wifi-honey","wireshark","xspy","yersinia","zaproxy"]
                                 for ss in SS_list:
-                                    if not cmd = os.system("apt-get install -y %s" % ss):
+                                    cmd = os.system("apt-get install -y %s" % str(ss))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % ss)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -893,7 +903,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 MA_list = ["cryptcat","cymothoa","dbd","dns2tcp","http-tunnel","httptunnel","intersect","nishang","polenum","powersploit","pwnat","ridenum","sbd","u3-pwn","webshells","weevely"]
                                 for ma in MA_list:
-                                    if not cmd = os.system("apt-get install -y %s" % ma):
+                                    cmd = os.system("apt-get install -y %s" % str(ma))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % ma)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -946,7 +957,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 RT_list = ["casefile","cutycapt","dos2unix","dradis","keepnote","magictree","metagoofil","nipper-ng","pipal"]
                                 for rt in RT_list:
-                                    if not cmd = os.system("apt-get install -y %s" % rt):
+                                    cmd = os.system("apt-get install -y %s" % str(rt))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % rt)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -1024,7 +1036,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 ET_list = ["armitage","backdoor-factory","cisco-auditing-tool","cisco-global-exploiter","cisco-ocs","cisco-torch","crackle","jboss-autopwn","linux-exploit-suggester","maltego-teeth","set","shellnoob","sqlmap","thc-ipv6","yersinia","beef-xss"]
                                 for et in ET_list:
-                                    if not cmd = os.system("apt-get install -y %s" % et):
+                                    cmd = os.system("apt-get install -y %s" % str(et))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % et)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -1110,7 +1123,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 FT_list = ["binwalk","bulk-extractor","chntpw","cuckoo","dc3dd","ddrescue","dumpzilla","extundelete","foremost","galleta","guymager","iphone-backup-analyzer","p0f","pdf-parser","pdfid","pdgmail","peepdf","volatility","xplico"]
                                 for ft in FT_list:
-                                    if not cmd = os.system("apt-get install -y %s" % ft):
+                                    cmd = os.system("apt-get install -y %s" % str(ft))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % ft)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -1178,7 +1192,11 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 ST_list = ["dhcpig","funkload","iaxflood","inviteflood","ipv6-toolkit","mdk3","reaver","rtpflood","slowhttptest","t50","termineter","thc-ipv6","thc-ssl-dos"]
                                 for st in ST_list:
-                                    if not cmd = os.system("apt-get install -y %s" % st):
+
+                                    cmd = os.system("apt-get install -y %s" % str(st))
+                                    
+                                    if not cmd:
+
                                         print ("Install \033[1;31m%s\033[1;m is failed" % st)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -1294,7 +1312,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 PA_list = ["acccheck","burpsuite","cewl","chntpw","cisco-auditing-tool","cmospwd","creddump","crunch","findmyhash","gpp-decrypt","hash-identifier","hexorbase","john","johnny","keimpx","maltego-teeth","maskprocessor","multiforcer","ncrack","oclgausscrack","pack","patator","polenum","rainbowcrack","rcracki-mt","rsmangler","statsprocessor","thc-pptp-bruter","truecrack","webscarab","wordlists","zaproxy"]
                                 for pa in PA_list:
-                                    if not cmd = os.system("apt-get install -y %s" % pa):
+                                    cmd = os.system("apt-get install -y %s" % str(pa))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % pa)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -1353,7 +1372,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 RE_list = ["apktool","dex2jar","python-diStorm3","edb-debugger","jad","javasnoop","JD","OllyDbg","smali","Valgrind","YARA"]
                                 for re1 in RE_list:
-                                    if not cmd = os.system("apt-get install -y %s" % re1):
+                                    cmd = os.system("apt-get install -y %s" % str(re1))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % re1)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
@@ -1398,7 +1418,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             elif opcion2 == "0":
                                 HH_list = ["android-sdk","apktool","arduino","dex2jar","sakis3g","smali"]
                                 for hh in HH_list:
-                                    if not cmd = os.system("apt-get install -y %s" % hh):
+                                    cmd = os.system("apt-get install -y %s" % str(hh))
+                                    if not cmd:
                                         print ("Install \033[1;31m%s\033[1;m is failed" % hh)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
