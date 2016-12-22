@@ -54,8 +54,8 @@ def main():
 
 1) Kali linux repositories setting     (add the tuna repositories and update source file)
 2) View Categories                     (show the kali tool menu)
-3) Install classicmenu indicator       (not recommand for new user)
-4) Install Kali menu                   (not recommand for new user)
+3) Install classicmenu indicator       (*not recommand for new user)
+4) Install Kali menu                   (*not recommand for new user)
 5) Help                                (as you see)
 6) Quit                                (quit the programer)
 
@@ -166,29 +166,37 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                     
 0) All
 
+plus) Remove all kali tool
+
              ''')
                         print ("\033[1;32mSelect a category or press (0) to install all Kali linux tools .\n\033[1;m")
 
-                        opcion1 = raw_input("\033[1;36mkat > \033[1;m")
-                        if opcion1 == "back":
+                        option1 = raw_input("\033[1;36mkat > \033[1;m")
+                        if option1 == "back":
                             inicio1()
 
-                        elif opcion1 == "gohome":
+                        elif option1 == "gohome":
                             inicio1()
 
-                        elif opcion1 == "0":
+                        elif option1 == "plus":
+                            kalitool = ["acccheck", "ace-voip", "amap", "automater", "braa", "casefile", "cdpsnarf", "cisco-torch", "cookie-cadger", "copy-router-config", "dmitry", "dnmap", "dnsenum", "dnsmap", "dnsrecon", "dnstracer", "dnswalk", "dotdotpwn", "enum4linux", "enumiax", "exploitdb", "fierce", "firewalk", "fragroute", "fragrouter", "ghost-phisher", "golismero", "goofile", "lbd", "maltego-teeth", "masscan", "miranda", "nmap", "parsero", "recon-ng", "smtp-user-enum", "snmpcheck", "sslcaudit", "sslsplit", "sslyze", "theharvester", "tlssled", "twofi", "urlcrazy", "wol-e", "intrace", "hping3", "bbqsql", "bed", "cisco-auditing-tool", "cisco-global-exploiter", "cisco-ocs", "doona", "greenbone-security-assistant", "hexorbase", "jsql", "lynis", "openvas-cli", "openvas-manager", "openvas-scanner", "oscanner", "powerfuzzer", "sfuzz", "sidguesser", "siparmyknife", "sqlmap", "sqlninja", "sqlsus", "tnscmd10g", "unix-privesc-check", "yersinia", "aircrack-ng", "asleap", "bluelog", "blueranger", "bluesnarfer", "bully", "cowpatty", "crackle", "eapmd5pass", "fern-wifi-cracker", "giskismet", "gqrx", "kalibrate-rtl", "killerbee", "kismet", "mdk3", "mfcuk", "mfoc", "mfterm", "multimon-ng", "pixiewps", "reaver", "redfang", "spooftooph", "wifi-honey", "wifitap", "wifite", "apache-users", "arachni", "blindelephant", "burpsuite", "cutycapt", "davtest", "deblaze", "dirb", "dirbuster", "fimap", "funkload", "grabber", "jboss-autopwn", "joomscan", "padbuster", "paros", "plecost", "proxystrike", "skipfish", "ua-tester", "uniscan", "vega", "w3af", "webscarab", "websploit", "wfuzz", "wpscan", "xsser", "zaproxy", "dnschef", "fiked", "hamster-sidejack", "hexinject", "iaxflood", "inviteflood", "ismtp", "mitmproxy", "ohrwurm", "protos-sip", "rebind", "responder", "rtpbreak", "rtpinsertsound", "rtpmixsound", "sctpscan", "sipp", "sipvicious", "sniffjoke", "sslstrip", "thc-ipv6", "voiphopper", "wireshark", "xspy", "cryptcat", "cymothoa", "dbd", "dns2tcp", "http-tunnel", "httptunnel", "intersect", "nishang", "polenum", "powersploit", "pwnat", "ridenum", "sbd", "u3-pwn", "webshells", "weevely", "dos2unix", "dradis", "keepnote", "magictree", "metagoofil", "nipper-ng", "pipal", "armitage", "backdoor-factory", "linux-exploit-suggester", "set", "shellnoob", "beef-xss", "binwalk", "bulk-extractor", "chntpw", "cuckoo", "dc3dd", "ddrescue", "dumpzilla", "extundelete", "foremost", "galleta", "guymager", "iphone-backup-analyzer", "p0f", "pdf-parser", "pdfid", "pdgmail", "peepdf", "volatility", "xplico", "dhcpig", "ipv6-toolkit", "rtpflood", "slowhttptest", "t50", "termineter", "thc-ssl-dos", "cewl", "cmospwd", "creddump", "crunch", "findmyhash", "gpp-decrypt", "hash-identifier", "john", "johnny", "keimpx", "maskprocessor", "multiforcer", "ncrack", "oclgausscrack", "pack", "patator", "rainbowcrack", "rcracki-mt", "rsmangler", "statsprocessor", "thc-pptp-bruter", "truecrack", "wordlists", "apktool", "dex2jar", "python-distorm3", "edb-debugger", "jad", "javasnoop", "jd", "ollydbg", "smali", "valgrind", "yara", "android-sdk", "arduino", "sakis3g"]
+                            for k_remove in kalitool:
+                                print ("\033[1;36mRemove\033[1;m \033[1;32m%s\033[1;m" % k_remove)
+                                cmd = os.system("apt-get -y autoremove %s" % k_remove)
+
+                        elif option1 == "0":
                             kalitool = ["acccheck", "ace-voip", "amap", "automater", "braa", "casefile", "cdpsnarf", "cisco-torch", "cookie-cadger", "copy-router-config", "dmitry", "dnmap", "dnsenum", "dnsmap", "dnsrecon", "dnstracer", "dnswalk", "dotdotpwn", "enum4linux", "enumiax", "exploitdb", "fierce", "firewalk", "fragroute", "fragrouter", "ghost-phisher", "golismero", "goofile", "lbd", "maltego-teeth", "masscan", "miranda", "nmap", "parsero", "recon-ng", "smtp-user-enum", "snmpcheck", "sslcaudit", "sslsplit", "sslyze", "theharvester", "tlssled", "twofi", "urlcrazy", "wol-e", "intrace", "hping3", "bbqsql", "bed", "cisco-auditing-tool", "cisco-global-exploiter", "cisco-ocs", "doona", "greenbone-security-assistant", "hexorbase", "jsql", "lynis", "openvas-cli", "openvas-manager", "openvas-scanner", "oscanner", "powerfuzzer", "sfuzz", "sidguesser", "siparmyknife", "sqlmap", "sqlninja", "sqlsus", "tnscmd10g", "unix-privesc-check", "yersinia", "aircrack-ng", "asleap", "bluelog", "blueranger", "bluesnarfer", "bully", "cowpatty", "crackle", "eapmd5pass", "fern-wifi-cracker", "giskismet", "gqrx", "kalibrate-rtl", "killerbee", "kismet", "mdk3", "mfcuk", "mfoc", "mfterm", "multimon-ng", "pixiewps", "reaver", "redfang", "spooftooph", "wifi-honey", "wifitap", "wifite", "apache-users", "arachni", "blindelephant", "burpsuite", "cutycapt", "davtest", "deblaze", "dirb", "dirbuster", "fimap", "funkload", "grabber", "jboss-autopwn", "joomscan", "padbuster", "paros", "plecost", "proxystrike", "skipfish", "ua-tester", "uniscan", "vega", "w3af", "webscarab", "websploit", "wfuzz", "wpscan", "xsser", "zaproxy", "dnschef", "fiked", "hamster-sidejack", "hexinject", "iaxflood", "inviteflood", "ismtp", "mitmproxy", "ohrwurm", "protos-sip", "rebind", "responder", "rtpbreak", "rtpinsertsound", "rtpmixsound", "sctpscan", "sipp", "sipvicious", "sniffjoke", "sslstrip", "thc-ipv6", "voiphopper", "wireshark", "xspy", "cryptcat", "cymothoa", "dbd", "dns2tcp", "http-tunnel", "httptunnel", "intersect", "nishang", "polenum", "powersploit", "pwnat", "ridenum", "sbd", "u3-pwn", "webshells", "weevely", "dos2unix", "dradis", "keepnote", "magictree", "metagoofil", "nipper-ng", "pipal", "armitage", "backdoor-factory", "linux-exploit-suggester", "set", "shellnoob", "beef-xss", "binwalk", "bulk-extractor", "chntpw", "cuckoo", "dc3dd", "ddrescue", "dumpzilla", "extundelete", "foremost", "galleta", "guymager", "iphone-backup-analyzer", "p0f", "pdf-parser", "pdfid", "pdgmail", "peepdf", "volatility", "xplico", "dhcpig", "ipv6-toolkit", "rtpflood", "slowhttptest", "t50", "termineter", "thc-ssl-dos", "cewl", "cmospwd", "creddump", "crunch", "findmyhash", "gpp-decrypt", "hash-identifier", "john", "johnny", "keimpx", "maskprocessor", "multiforcer", "ncrack", "oclgausscrack", "pack", "patator", "rainbowcrack", "rcracki-mt", "rsmangler", "statsprocessor", "thc-pptp-bruter", "truecrack", "wordlists", "apktool", "dex2jar", "python-distorm3", "edb-debugger", "jad", "javasnoop", "jd", "ollydbg", "smali", "valgrind", "yara", "android-sdk", "arduino", "sakis3g"]
                             kt_count = 1
                             kt_len = len(kalitool)
                             for kt in kalitool:
-                                print ("\033[1;36mi\Install\033[1;m \033[1;32m%s        %d / %d\033[1;m" % (kt, kt_count, kt_len))
+                                print ("\033[1;36mInstall\033[1;m \033[1;32m%s        %d / %d\033[1;m" % (kt, kt_count, kt_len))
                                 cmd = os.system("apt-get -f -y install %s" % kt)
                                 if not cmd:
                                     print ("The system return \033[1;31m%d\033[1;m" % cmd)
                                 kt_count += 1
                             cmd = os.system("wget http://www.morningstarsecurity.com/downloads/bing-ip2hosts-0.4.tar.gz && tar -xzvf bing-ip2hosts-0.4.tar.gz && cp bing-ip2hosts-0.4/bing-ip2hosts /usr/local/bin/")
 
-                        while opcion1 == "1":
+                        while option1 == "1":
                             print ('''
  _________
 | 3 floor |
@@ -367,7 +375,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 
 
 
-                        while opcion1 == "2":
+                        while option1 == "2":
                             print ('''
  _________
 | 3 floor |
@@ -484,7 +492,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
 
-                        while opcion1 == "3":
+                        while option1 == "3":
                             print ('''
  _________
 | 3 floor |
@@ -590,7 +598,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                 inicio1()                       
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                        while opcion1 == "4":
+                        while option1 == "4":
                             print ('''
  _________
 | 3 floor |
@@ -725,7 +733,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                         print ("Install \033[1;31m%s\033[1;m is failed" % wa1)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                        while opcion1 == "5":
+                        while option1 == "5":
                             print ('''
  _________
 | 3 floor |
@@ -833,7 +841,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
 
-                        while opcion1 == "6":
+                        while option1 == "6":
                             print ('''
  _________
 | 3 floor |
@@ -908,7 +916,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                         print ("Install \033[1;31m%s\033[1;m is failed" % ma)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                        while opcion1 == "7":
+                        while option1 == "7":
                             print ('''
  _________
 | 3 floor |
@@ -963,7 +971,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
 
-                        while opcion1 == "8":
+                        while option1 == "8":
                             print ('''
  _________
 | 3 floor |
@@ -1042,7 +1050,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
 
-                        while opcion1 == "9":
+                        while option1 == "9":
                             print ('''
  _________
 | 3 floor |
@@ -1128,7 +1136,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                         print ("Install \033[1;31m%s\033[1;m is failed" % ft)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                        while opcion1 == "10":
+                        while option1 == "10":
                             print ('''
  _________
 | 3 floor |
@@ -1200,7 +1208,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                         print ("Install \033[1;31m%s\033[1;m is failed" % st)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                        while opcion1 == "11":
+                        while option1 == "11":
                             print ('''
  _________
 | 3 floor |
@@ -1317,7 +1325,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                         print ("Install \033[1;31m%s\033[1;m is failed" % pa)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                        while opcion1 == "12" :
+                        while option1 == "12" :
                             print ('''
  _________
 | 3 floor |
@@ -1377,7 +1385,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                         print ("Install \033[1;31m%s\033[1;m is failed" % re1)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                        while opcion1 == "13" :
+                        while option1 == "13" :
                             print ('''
  _________
 | 3 floor |
@@ -1423,7 +1431,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                                         print ("Install \033[1;31m%s\033[1;m is failed" % hh)
                             else:
                                 print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                        while opcion1 == "14" :
+                        while option1 == "14" :
                             print ('''
  _________
 | 3 floor |
@@ -1454,7 +1462,7 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
             os.remove("/etc/apt/sources.list")
             shutil.copy("/etc/apt/sources.list.bak", "/etc/apt/sources.list")
             os.remove("/etc/apt/sources.list.bak")
-            print ("\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m")
+            print ("\n\n\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m")
     except Exception:
         traceback.print_exc(file=sys.stdout)
     sys.exit(0)
