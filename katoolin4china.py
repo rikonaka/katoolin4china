@@ -125,6 +125,11 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
                         cmd1 = os.system("apt-get install kali-menu")
                 elif opcion0 == "5":
                     print ('''
+                    
+####################### User Guide ##########################
+If you run this script, the sources.list has been backup to sources.list.bak and replace the sources.list as kali source.
+So you just choice 2) View Catefories to install the package you want is ok.
+THX
 \033[1;31m+++++++++++++++++++++++++++++++++++++++++++\033[1;m
 
   \033[1;32m|Commands\033[1;m------\033[1;34m|Meaning\033[1;m
