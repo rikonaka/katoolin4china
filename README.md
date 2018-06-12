@@ -2,11 +2,6 @@
 # katoolin for China
 Automatically install all kali linux tools for Chinese user where visited the kali.org slowly.
 
-# Features
-- Add Kali linux repositories
-- Remove kali linux repositories
-- Install Kali linux tools
-
 # Requirements
 - Python 3.5(Original code is base on python 2.7)
 - An operating system (tested on Ubuntu, not tested on Debian)
