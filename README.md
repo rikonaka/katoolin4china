@@ -44,8 +44,64 @@ bing-ip2hosts
 ntop
 ```
 
+- Vulnerability Analysis
+```
+commix
+DBPwAudit
+GSD
+Inguma
+```
 
+- Wireless Attack
+```
+BlueMaho
+Bluepot
+Gqrx
+gr-scan
+```
 
+- Web Applications
+```
+Cutycapt
+Webshag
+WebSlayer
+```
+
+- Sniffing & Spoofing
+```
+isr-svilgrade
+```
+
+- Exploitation Tools
+```
+Nishange
+```
+
+- Forensics Tools
+```
+Capstone
+DFF
+diStorm3
+RegRipper
+```
+
+- Stress Testing
+```
+Inundator
+```
+
+- Password Attacks
+```
+DBPwAudit
+THC-Hydra
+phrasendrescher
+SQLdict
+```
+
+- Extra
+```
+Wifresti
+```
 
 # Video
 - This video is remix official
