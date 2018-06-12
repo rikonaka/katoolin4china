@@ -8,7 +8,7 @@ import shutil
 # Custom module here
 
 from core import pstr
-from core import core
+from core import function
 
 
 def main():
@@ -18,11 +18,11 @@ def main():
 
     try:
         # Init the apt sources.list
-        core.init_apt()
+        function.init_apt()
         # Print logo
         pstr.plogo()
         # Into loop
-        core.loop_1()
+        function.loop_1()
     except KeyboardInterrupt:
         print('Exit...Goodbye...')
         if os.path.exists('/etc/apt/sources.list.bak'):

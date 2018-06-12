@@ -364,6 +364,7 @@ def forensics_tools():
 
     return rdict
 
+
 def stress_testing():
     '''
     Return
@@ -388,11 +389,12 @@ def stress_testing():
 
     return rdict
 
+
 def password_attacks():
     '''
     Return
     '''
-    
+
     rdict = {
         1: 'acccheck',
         2: 'burpsuite',
@@ -434,6 +436,7 @@ def password_attacks():
 
     return rdict
 
+
 def reverse_engineering():
     '''
     Return
@@ -455,6 +458,7 @@ def reverse_engineering():
 
     return rdict
 
+
 def hardware_hacking():
     '''
     Return
@@ -470,7 +474,8 @@ def hardware_hacking():
     }
 
     return rdict
-    
+
+
 def extra():
     '''
     Return
