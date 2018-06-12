@@ -62,7 +62,7 @@ def loop_1():
             # 1) Update                                      (execute the sudo apt-get update)
             # 2) Remove all kali linux repositories          (remove the kali repositories)
             # 3) View the contents of sources.list file      (show the sources.list)
-            uselect_1 = input('\033[1;32mWhat do you want to do? > \033[1;m')
+            uselect_1 = input('\033[1;36mWhat do you want to do? > \033[1;m')
 
             if uselect_1 == '1':
                 try:
@@ -90,7 +90,7 @@ def loop_1():
                 try:
                     subprocess.check_call(
                         'mv /etc/apt/sources.list.bak /etc/apt/sources.list.katoolin4cina', shell=True)
-                except shutil.Error as error_output:
+                except subprocess.CalledProcessError as error_output:
                     print('Katoolin4china backup filed: {0}'.format(
                         error_output))
                     sys.exit(1)
@@ -104,7 +104,7 @@ def loop_1():
             elif uselect_1 == 'home':
                 loop_1()
 
-            elif uselect == '3':
+            elif uselect_1 == '3':
                 file = open('/etc/apt/sources.list', 'r')
                 print(file.read())
 
