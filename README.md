@@ -17,7 +17,7 @@ Automatically install all Kali linux tools for Chinese user
 
 ```
 sudo apt-get install git
-git clone https://github.com/SuperSuperSuperSuper5/katoolin4china.git
+git clone https://github.com/Jayzisinstance/katoolin4china.git
 cd katoolin4china
 sudo cp katoolin4china /usr/bin/katoolin4china
 sudo chmod +x /usr/bin/katoolin4china
