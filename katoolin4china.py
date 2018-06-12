@@ -16,6 +16,10 @@ def main():
     here is the main function
     '''
 
+    if os.geteuid() != 0:
+        print('\033[1;31m\This program must be run as root. Aborting.\033[1;m')
+        sys.exit(1)
+
     try:
         # Init the apt sources.list
         function.init_apt()
