@@ -2,8 +2,7 @@
 
 import os
 import sys
-import traceback
-import shutil
+import subprocess
 
 # Custom module here
 
@@ -17,7 +16,7 @@ def main():
     '''
 
     if os.geteuid() != 0:
-        print('\033[1;31m\This program must be run as root. Aborting.\033[1;m')
+        print('\033[1;31mThis program must be run as root! Aborting.\033[1;m')
         sys.exit(1)
 
     try:
@@ -30,9 +29,24 @@ def main():
     except KeyboardInterrupt:
         print('Exit...Goodbye...')
         if os.path.exists('/etc/apt/sources.list.bak'):
-            os.remove('/etc/apt/sources.list')
-            shutil.copy('/etc/apt/sources.list.bak', '/etc/apt/sources.list')
-            os.remove('/etc/apt/sources.list.bak')
+            try:
+                subprocess.check_call(
+                    'rm -f /etc/apt/sources.list', shell=True)
+            except subprocess.CalledProcessError as error_output:
+                print('Remove failed: {0}'.format(error_output))
+
+            try:
+                subprocess.check_call(
+                    'cp /etc/apt/sources.list.bak /etc/apt/sources.list', shell=True)
+            except subprocess.CalledProcessError as error_output:
+                print('Copy failed: {0}'.format(error_output))
+
+            try:
+                subprocess.check_call(
+                    'rm -f /etc/apt/sources.list.bak', shell=True)
+            except subprocess.CalledProcessError as error_output:
+                print("Remove failed: {0}".format(error_output))
+
             print(
                 '\n\n\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m')
 

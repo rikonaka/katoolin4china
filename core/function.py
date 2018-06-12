@@ -144,10 +144,9 @@ def loop_1():
         elif uselect == '4':
             try:
                 subprocess.check_call(
-                    'rm -f /etc/apt/sources.list', shell=True)
+                    'cp /etc/apt/sources.list.bak /etc/apt/sources.list.katoolin4cina', shell=True)
             except subprocess.CalledProcessError as error_output:
-                print(
-                    'Remove the /etc/apt/sources.list failed: {0}'.format(error_output))
+                print('Make katoolin4china failed: {0}'.format(error_output))
 
             try:
                 subprocess.check_call(
@@ -155,12 +154,6 @@ def loop_1():
             except subprocess.CalledProcessError as error_output:
                 print(
                     'Copy /etc/apt/sources.list.bak failed: {0}'.format(error_output))
-
-            try:
-                subprocess.check_call(
-                    'mv /etc/apt/sources.list.bak /etc/apt/sources.list.katoolin4cina', shell=True)
-            except subprocess.CalledProcessError as error_output:
-                print('Make katoolin4china failed: {0}'.format(error_output))
 
             print(
                 '\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m')
