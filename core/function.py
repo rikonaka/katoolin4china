@@ -41,7 +41,27 @@ def init_apt():
     try:
         # Add the repositories in /etc/apt/sources.list
         subprocess.check_call(
-            "echo '  # Kali linux repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
+            "echo '# Kali linux repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
+    except subprocess.CalledProcessError as error_output:
+        print('Call error: {0}'.format(error_output))
+
+
+def add_apt():
+    '''
+    Add the repositories manual
+    '''
+
+    try:
+        # Here we back up the original config file
+        subprocess.check_call(
+            'cp /etc/apt/sources.list /etc/apt/sources.list.bak', shell=True)
+    except subprocess.CalledProcessError as error_output:
+        print('Copy apt file error: {0}'.format(error_output))
+
+    try:
+        # Add the repositories in /etc/apt/sources.list
+        subprocess.check_call(
+            "echo '# Kali linux repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
     except subprocess.CalledProcessError as error_output:
         print('Call error: {0}'.format(error_output))
 
@@ -62,6 +82,7 @@ def loop_1():
             # 1) Update                                      (execute the sudo apt-get update)
             # 2) Remove all kali linux repositories          (remove the kali repositories)
             # 3) View the contents of sources.list file      (show the sources.list)
+            # 4) Add kali repositoried manual                (do it again)
             uselect_1 = input('\033[1;36mWhat do you want to do? > \033[1;m')
 
             if uselect_1 == '1':
@@ -108,6 +129,9 @@ def loop_1():
                 file = open('/etc/apt/sources.list', 'r')
                 print(file.read())
 
+            elif uselect_1 == '4':
+                add_apt()
+
             else:
                 print('\033[1;31mSorry, that was an invalid command!\033[1;m')
 
@@ -120,10 +144,9 @@ def loop_1():
         elif uselect == '4':
             try:
                 subprocess.check_call(
-                    'rm -f /etc/apt/sources.list', shell=True)
+                    'cp /etc/apt/sources.list.bak /etc/apt/sources.list.katoolin4cina', shell=True)
             except subprocess.CalledProcessError as error_output:
-                print(
-                    'Remove the /etc/apt/sources.list failed: {0}'.format(error_output))
+                print('Make katoolin4china failed: {0}'.format(error_output))
 
             try:
                 subprocess.check_call(
@@ -131,12 +154,6 @@ def loop_1():
             except subprocess.CalledProcessError as error_output:
                 print(
                     'Copy /etc/apt/sources.list.bak failed: {0}'.format(error_output))
-
-            try:
-                subprocess.check_call(
-                    'mv /etc/apt/sources.list.bak /etc/apt/sources.list.katoolin4cina', shell=True)
-            except subprocess.CalledProcessError as error_output:
-                print('Make katoolin4china failed: {0}'.format(error_output))
 
             print(
                 '\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m')

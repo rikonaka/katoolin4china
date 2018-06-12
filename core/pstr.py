@@ -76,6 +76,7 @@ def pstart_1():
 1) Update                                      (execute the sudo apt-get update)
 2) Remove all kali linux repositories          (remove the kali repositories)
 3) View the contents of sources.list file      (show the sources.list)
+4) Add kali repositoried manual                (do it again)
 
 '''
 
