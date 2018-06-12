@@ -34,7 +34,7 @@ def init_apt():
     try:
         # Here we back up the original config file
         subprocess.check_call(
-            'cp /etc/apt/sources.list /etc/apt/sources.list.bak')
+            'cp /etc/apt/sources.list /etc/apt/sources.list.bak', shell=True)
     except subprocess.CalledProcessError as error_output:
         print('Copy apt file error: {0}'.format(error_output))
 
@@ -171,9 +171,11 @@ def uninstall_all(toolist):
     for tool in toolist:
         # Some unsupport package dict.values() return 0
         if tool != 0:
-            print('\033[1;36mRemove\033[1;m \033[1;32m%s\033[1;m' % tool)
+            print(
+                '\033[1;36mRemove\033[1;m \033[1;32m{0}\033[1;m'.format(tool))
             try:
-                subprocess.check_call('apt -y autoremove %s' % tool)
+                subprocess.check_call(
+                    'apt -y autoremove {0}'.format(tool), shell=True)
             except subprocess.CalledProcessError as error_output:
                 print('Remove the {0} failed: {1}'.format(
                     tool, error_output))
@@ -186,7 +188,7 @@ def every_select(toolswitcher, specialtoolswitcher):
 
     print(
         '\033[1;32mInsert the number of the tool to install it.\n\033[1;m')
-    uselect_2_1 = input('\033[1;36mkat > \033[1;m')
+    eselect = input('\033[1;36mkat > \033[1;m')
 
     if eselect == 'back':
         loop_1()
