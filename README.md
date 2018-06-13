@@ -14,16 +14,14 @@ Automatically install all kali linux tools for Chinese user where visited the ka
 sudo apt-get install git
 git clone https://github.com/Jayzisinstance/katoolin4china.git
 cd katoolin4china
-sudo cp katoolin4china /usr/bin/k4c
-sudo chmod +x /usr/bin/k4c
-sudo k4c
+sudo ./katoolin4china.py
 ```
 
 # Uninstallation
 - Here is a simple uninstallation way
 
 ```
-rm -f /usr/bin/k4c
+rm -rf katoolin4china/
 ```
 
 # NotSupport
