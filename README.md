@@ -1,4 +1,5 @@
-![katoolin](https://github.com/Jayzisinstance/katoolin4china/blob/dev/pic/test.gif)
+![katoolin](https://github.com/Jayzisinstance/katoolin4china/blob/master/pic/test.gif)
+
 # katoolin for China
 Automatically install all kali linux tools for Chinese user where visited the kali.org slowly.
 
