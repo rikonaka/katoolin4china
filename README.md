@@ -1,11 +1,12 @@
-![katoolin](https://github.com/Jayzisinstance/katoolin4china/blob/master/pic/3.png)
+![katoolin](https://github.com/Jayzisinstance/katoolin4china/blob/master/pic/test.gif)
+
 # katoolin for China
 Automatically install all kali linux tools for Chinese user where visited the kali.org slowly.
 
 # Requirements
 - Python 3.5(Original code is base on python 2.7)
-- An operating system (tested on Ubuntu, not tested on Debian)
-- Not include CentOS and Redha
+- An operating system (tested on Ubuntu, but not tested on Debian)
+- Not supprot CentOS or Redhat or Fedora
 
 # Installation
 - Here is a simple installation way
@@ -24,11 +25,11 @@ sudo ./katoolin4china.py
 rm -rf katoolin4china/
 ```
 
-# NotSupport
+# Not-Support-Tool-List
 
-- Some software is no longer included in the latest version of the Kali system 
-- Or could NOT install auto
-- But still you can see at https://tools.kali.org/tools-listing
+- Some software is no longer included in the latest version of the Kail
+- So we will NOT install it into you system(actually we also cound't found it '.deb' package)
+- But you can see at https://tools.kali.org/tools-listing
 
 - Information Gathering
 
@@ -97,8 +98,7 @@ Wifresti
 ```
 
 # Video
-- This video is remix official
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- No
 
 # Usage
 - Typing the number of a tool will install it
@@ -110,7 +110,7 @@ Wifresti
 - home : Go to the main menu
 
 # Warning
-- Before updating your system , please make sure you have removed all Kali-linux repositories to avoid any kind of problem .
+- Before upgrade your system , please make sure you have removed all Kali-linux repositories in you /etc/apt/sources.list.
 
 # I have some questions
 - Please visit https://github.com/Jayzisinstance/katoolin4china/issues
