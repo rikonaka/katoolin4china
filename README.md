@@ -50,7 +50,7 @@ sudo pip3 uninstall katoolin4china
 rm -rf katoolin4china/
 ```
 
-# Use-The-Tool:
+# Use-The-Tool
 - Just input the k4c like this
 
 ```
