@@ -51,7 +51,7 @@ def main():
                     error_output))
 
             print(
-                '\n\n\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m')
+                '\n\n\033[1;31m\nAll Kali repositories have been deleted !\n\033[1;m')
 
 
 if __name__ == "__main__":

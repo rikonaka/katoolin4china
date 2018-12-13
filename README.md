@@ -1,7 +1,7 @@
 ![k4c]()
 
 # katoolin for China
-Automatically install all kali linux tools for Chinese user where visited the kali.org slowly.
+Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
 
 # Requirements
 - Python 3.5 or later
@@ -113,7 +113,7 @@ Wifresti
 
 # Usage
 - Typing the number of a tool will install it
-- Typing 0 will install all Kali Linux tools
+- Typing 0 will install all Kali tools
 - By installing armitage , you will install metasploit
 
 # Hotkey

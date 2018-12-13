@@ -17,7 +17,7 @@ def plogo():
  $$ | $$  |            $$ |                        $$ |\\__|
  $$ |$$  /  $$$$$$\\  $$$$$$\\    $$$$$$\\   $$$$$$\\  $$ |$$\\ $$$$$$$\\
  $$$$$  /   \\____$$\\ \\_$$  _|  $$  __$$\\ $$  __$$\\ $$ |$$ |$$  __$$\\
- $$  $$<    $$$$$$$ |  \033[1;36mKali linux tools installer\033[1;m |$$ |$$ |$$ |  $$ |
+ $$  $$<    $$$$$$$ |  \033[1;36mKali tools installer\033[1;m |$$ |$$ |$$ |  $$ |
  \033[1;36m$$ |\\$$\\  $$  __$$ |  $$ |$$\\ $$ |  $$ |$$ |  $$ |$$ |$$ |$$ |  $$ |
  $$ | \\$$\\ \$$$$$$$ |  \\$$$$  |\\$$$$$$  |\\$$$$$$  |$$ |$$ |$$ |  $$ |
  \\__|  \\__| \\_______|   \\____/  \\______/  \\______/ \\__|\\__|\\__|  \\__|\033[1;m
@@ -54,10 +54,10 @@ def pstart():
  _________
 | 1 floor |
 
-1) Kali linux repositories setting     (add the tuna repositories and update source file)
-2) Install tools                       (show the kali tool menu)
-3) Help                                (as you see)
-4) Quit                                (quit the programer)
+1) Kali repositories setting     (add the tuna repositories and update source file)
+2) Install tools                 (show the Kali tool menu)
+3) Help                          (as you see)
+4) Quit                          (quit the programer)
 
 '''
 
@@ -74,9 +74,9 @@ def pstart_1():
 | 2 floor |
 
 1) Update                                      (execute the sudo apt-get update)
-2) Remove all kali linux repositories          (remove the kali repositories)
+2) Remove all Kali repositories                (remove the Kali repositories)
 3) View the contents of sources.list file      (show the sources.list)
-4) Add kali repositoried manual                (do it again)
+4) Add Kali repositoried manual                (do it again)
 
 '''
 

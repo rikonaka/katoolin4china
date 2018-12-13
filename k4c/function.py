@@ -44,7 +44,7 @@ def init_apt():
     try:
         # Add the repositories in /etc/apt/sources.list
         subprocess.check_call(
-            "echo '# Kali linux repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
+            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
     except subprocess.CalledProcessError as error_output:
         print('Call error: {0}'.format(error_output))
 
@@ -64,7 +64,7 @@ def add_apt():
     try:
         # Add the repositories in /etc/apt/sources.list
         subprocess.check_call(
-            "echo '# Kali linux repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
+            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
     except subprocess.CalledProcessError as error_output:
         print('Call error: {0}'.format(error_output))
 
@@ -75,15 +75,15 @@ def loop_1():
         # Print the start menu here
         pstr.pstart()
         uselect = input('\033[1;36mkat > \033[1;m')
-        # 1) Kali linux repositories setting     (add the tuna repositories and update source file)
-        # 2) Install tools                       (show the kali tool menu)
-        # 3) Help                                (as you see)
-        # 4) Quit                                (quit the programer)
+        # 1) Kali repositories setting     (add the tuna repositories and update source file)
+        # 2) Install tools                 (show the kali tool menu)
+        # 3) Help                          (as you see)
+        # 4) Quit                          (quit the programer)
         while uselect == '1':
             pstr.pstart_1()
 
             # 1) Update                                      (execute the sudo apt-get update)
-            # 2) Remove all kali linux repositories          (remove the kali repositories)
+            # 2) Remove all kali repositories                (remove the kali repositories)
             # 3) View the contents of sources.list file      (show the sources.list)
             # 4) Add kali repositoried manual                (do it again)
             uselect_1 = input('\033[1;36mWhat do you want to do? > \033[1;m')
@@ -120,7 +120,7 @@ def loop_1():
                     sys.exit(1)
 
                 print(
-                    '\033[1;31m\nAll kali linux repositories have been deleted!\n\033[1;m')
+                    '\033[1;31m\nAll Kali repositories have been deleted!\n\033[1;m')
 
             elif uselect_1 == 'back':
                 loop_1()
@@ -159,7 +159,7 @@ def loop_1():
                     'Copy /etc/apt/sources.list.bak failed: {0}'.format(error_output))
 
             print(
-                '\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m')
+                '\033[1;31m\nAll Kali repositories have been deleted !\n\033[1;m')
             sys.exit(0)
 
 
@@ -264,7 +264,7 @@ def loop_2():
     # 7) Reporting Tools                  14) Extra
     # 0) Install all                      r) Remove all
     print(
-        '\033[1;32mSelect a category or press (0) to install all Kali linux tools.\n\033[1;m')
+        '\033[1;32mSelect a category or press (0) to install all Kali tools.\n\033[1;m')
 
     uselect_2 = input('\033[1;36mkat > \033[1;m')
     if uselect_2 == 'back':
