@@ -5,6 +5,7 @@ Automatically install all kali linux tools for Chinese user where visited the ka
 
 # Requirements
 - Python 3.5 or later
+- pip3 for Python3
 - An operating system (tested on Ubuntu, but not tested on Debian)
 - Not supprot CentOS or Redhat or Fedora
 
@@ -28,8 +29,9 @@ pip uninstall katoolin4china
 rm -rf katoolin4china/
 ```
 
-# Usage:
-- Just input the k4c
+# Use-The-Tool:
+- Just input the k4c like this
+
 ```
 sudo k4c
 ```

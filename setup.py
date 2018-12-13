@@ -7,7 +7,7 @@ setuptools.setup(
 
     name="katoolin4china",
 
-    version="0.9",
+    version="1.6",
 
     license="GPL-2.0",
 
