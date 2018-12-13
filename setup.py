@@ -23,7 +23,7 @@ setuptools.setup(
 
     entry_points={
         "console_scripts": [
-            "k4c = katoolin.__main__:main",
+            "katlooin4china = katoolin4china.__main__:main",
         ],
     },
 
