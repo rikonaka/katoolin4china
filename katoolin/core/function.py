@@ -173,7 +173,7 @@ def install_all(toollist):
                 '\033[1;36mInstall\033[1;m \033[1;32m{0}    {1}/{2}\033[1;m'.format(tool, count, length))
             try:
                 subprocess.check_call(
-                    'apt -f -y install {0}'.format(tool), shell=True)
+                    'apt install -f -y {0}'.format(tool), shell=True)
             except subprocess.CalledProcessError as error_output:
                 print('Install \033[1;31m{0}\033[1;m failed: {1}'.format(
                     tool, error_output))
