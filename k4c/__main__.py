@@ -6,8 +6,8 @@ import subprocess
 
 # Custom module here
 
-from core import pstr
-from core import function
+from . import pstr
+from . import function
 
 
 def main():
