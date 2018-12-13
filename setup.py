@@ -5,7 +5,7 @@ import setuptools
 
 setuptools.setup(
 
-    name="katoolin4china",
+    name="k4c",
 
     version="1.6",
 
@@ -18,7 +18,7 @@ setuptools.setup(
     ],
 
     packages=[
-        "katoolin4china",
+        "k4c",
     ],
 
     entry_points={
