@@ -1,28 +1,37 @@
-![katoolin](https://github.com/Jayzisinstance/katoolin4china/blob/master/pic/test.gif)
+![k4c]()
 
 # katoolin for China
 Automatically install all kali linux tools for Chinese user where visited the kali.org slowly.
 
 # Requirements
-- Python 3.5(Original code is base on python 2.7)
+- Python 3.5 or later
 - An operating system (tested on Ubuntu, but not tested on Debian)
 - Not supprot CentOS or Redhat or Fedora
 
 # Installation
-- Here is a simple installation way
+- Here is a simple installation way use the pip
 
 ```
 sudo apt-get install git
-git clone https://github.com/Jayzisinstance/katoolin4china.git
+git clone https://github.com/rikonaka/katoolin4china.git
 cd katoolin4china
-sudo ./katoolin4china.py
+sudo pip install --upgrade .
 ```
+
+- After this command, the k4c will installed in you system
 
 # Uninstallation
 - Here is a simple uninstallation way
 
 ```
+pip uninstall katoolin4china
 rm -rf katoolin4china/
+```
+
+# Usage:
+- Just input the k4c
+```
+sudo k4c
 ```
 
 # Not-Support-Tool-List
@@ -98,7 +107,7 @@ Wifresti
 ```
 
 # Video
-- No
+- Not have yet
 
 # Usage
 - Typing the number of a tool will install it
@@ -113,7 +122,7 @@ Wifresti
 - Before upgrade your system , please make sure you have removed all Kali-linux repositories in you /etc/apt/sources.list.
 
 # I have some questions
-- Please visit https://github.com/Jayzisinstance/katoolin4china/issues
+- Please visit https://github.com/rikonaka/katoolin4china/issues
 
 # Contact
 - Email : xxy1836@gmail.com Jay
