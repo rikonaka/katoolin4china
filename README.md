@@ -1,4 +1,4 @@
-![k4c]()
+![k4c](https://github.com/rikonaka/katoolin4china/blob/master/pic/howtouse.gif)
 
 ```
  $$\   $$\             $$\                         $$\ $$\
