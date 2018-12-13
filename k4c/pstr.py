@@ -34,10 +34,8 @@ def plogo():
 
  \033[1;32m+ -- -- +=[ OriginAuthor: LionSec    | Homepage: www.lionsec.net\033[1;m
  \033[1;32m+ -- -- +=[ RemixAuthor : isinstance | Homepage: https://github.com/rikonaka/katoolin4china\033[1;m
- \033[1;32m+ -- -- +=[ 331 Tools \033[1;m
 
-
-\033[1;31m[W] Before updating your system, please make sure you have removed all Kali-linux repositories to avoid any kind of problem.\033[1;m
+\033[1;31m[W] Before updating your system, please make sure you have removed all Kali repositories to avoid any kind of problem.\033[1;m
 \033[1;31m[W] Although this software will auto remove it.\033[1;m
 
 '''
@@ -54,7 +52,7 @@ def pstart():
  _________
 | 1 floor |
 
-1) Kali repositories setting     (add the tuna repositories and update source file)
+1) Kali repositories setting     (add the tuna repositories)
 2) Install tools                 (show the Kali tool menu)
 3) Help                          (as you see)
 4) Quit                          (quit the programer)
