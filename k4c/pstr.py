@@ -30,10 +30,10 @@ def plogo():
  \033[1;36m           $$  __/ $$    $$\\ $$$$ _/     $$ \\       $$\\__$$\\ $$ |$$\\__$$ | $$$$$$$ |
             $$ |    $$    $$ |$$  /       \\$$ \\      $$ | $$ |$$ |$$ | $$ |$$    $$ |
             $$ |    \\$$$$$$$ |$$ |         \\$$$$$$$$\\$$ | $$ |$$ |$$ | $$ |\$$$$$$$ |
-            \\__|     \\_______|\\__|          \\_______|\\__| \\__|\\__|\\__|  \\_| \\_______| V1.5\033[1;m
+            \\__|     \\_______|\\__|          \\_______|\\__| \\__|\\__|\\__|  \\_| \\_______| V1.6\033[1;m
 
- \033[1;32m+ -- -- +=[ OriginAuthor: LionSec        | Homepage: www.lionsec.net\033[1;m
- \033[1;32m+ -- -- +=[ RemixAuthor : Jayzisinstance | Homepage: https://github.com/Jayzisinstance\033[1;m
+ \033[1;32m+ -- -- +=[ OriginAuthor: LionSec    | Homepage: www.lionsec.net\033[1;m
+ \033[1;32m+ -- -- +=[ RemixAuthor : isinstance | Homepage: https://github.com/rikonaka/katoolin4china\033[1;m
  \033[1;32m+ -- -- +=[ 331 Tools \033[1;m
 
 

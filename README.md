@@ -16,7 +16,7 @@ Automatically install all Kali tools for Chinese user where visited the kali.org
 sudo apt-get install git
 git clone https://github.com/rikonaka/katoolin4china.git
 cd katoolin4china
-sudo pip3 install --upgrade .
+sudo pip3 install .
 ```
 
 - After this command, the k4c will installed in you system
@@ -34,6 +34,14 @@ rm -rf katoolin4china/
 
 ```
 sudo k4c
+```
+
+# Upgrade
+
+```
+cd katoolin4china/
+git pull
+sudo pip3 install --upgrade .
 ```
 
 # Not-Support-Tool-List
