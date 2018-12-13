@@ -16,7 +16,7 @@ def main():
     '''
 
     if os.geteuid() != 0:
-        print('\033[1;31mThis program must be run as root! Aborting.\033[1;m')
+        print('\033[1;31mThis program must be run as root! Aborting.\033[1;m\n')
         sys.exit(1)
 
     try:

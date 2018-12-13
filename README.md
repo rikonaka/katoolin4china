@@ -25,7 +25,7 @@ sudo pip3 install --upgrade .
 - Here is a simple uninstallation way
 
 ```
-pip3 uninstall katoolin4china
+sudo pip3 uninstall katoolin4china
 rm -rf katoolin4china/
 ```
 

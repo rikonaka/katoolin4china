@@ -26,8 +26,11 @@ def init_apt():
         # This command is add the pgp keys
         # If NOT add
         # We will see ' GPG error'
+        # subprocess.check_call(
+        #     'apt-key adv --keyserver pgp.mit.edu --recv-keys ED444FF07D8D0BF6', shell=True)
+        # use the new key server
         subprocess.check_call(
-            'apt-key adv --keyserver pgp.mit.edu --recv-keys ED444FF07D8D0BF6', shell=True)
+            'apt-key adv --keyserver keys.gnupg.net --recv-keys 7D8D0BF6', shell=True)
     except subprocess.CalledProcessError as error_output:
         print('Call error: {0}'.format(error_output))
 
