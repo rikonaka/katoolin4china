@@ -162,8 +162,10 @@ Wifresti
 
 # Feature
 
-[ ] Automatically test mirror site speed and latency and choose the best one.
+- [x] Python3 and pip3 support.
 
-[ ] Graphical interface implementation.
+- [ ] Automatically test mirror site speed and latency and choose the best one.
 
-[ ] Remove installed kali package.
+- [ ] Graphical interface implementation.
+
+- [ ] Remove installed kali package.
