@@ -2,6 +2,7 @@
 - Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
 - I also rewrote a list of functions and collation tools.
 - So there will be a lot of defferences with the original version.
+- The new version uses a very convenient pip3 to install the program.
 
 ```
  $$\   $$\             $$\                         $$\ $$\
