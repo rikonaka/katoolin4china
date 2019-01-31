@@ -160,8 +160,6 @@ Wifresti
 # Have questions?
 - Please visit https://github.com/rikonaka/katoolin4china/issues
 
----
-
 # Feature
 
 - [x] Python3 and pip3 support.
