@@ -1,5 +1,7 @@
 # katoolin for China
-Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
+- Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
+- I also rewrote a list of functions and collation tools.
+- So there will be a lot of defferences with the original version.
 
 ```
  $$\   $$\             $$\                         $$\ $$\
@@ -70,6 +72,8 @@ sudo pip3 install --upgrade .
 - Some software is no longer included in the latest version of the Kail
 - So we will NOT install it into you system(actually we also cound't found it '.deb' package)
 - But you can see at https://tools.kali.org/tools-listing
+
+---
 
 - Information Gathering
 
@@ -152,8 +156,5 @@ Wifresti
 # Warning
 - Before upgrade your system , please make sure you have removed all Kali-linux repositories in you /etc/apt/sources.list.
 
-# I have some questions
+# Have questions?
 - Please visit https://github.com/rikonaka/katoolin4china/issues
-
-# Contact
-- Email : xxy1836@gmail.com Jay
