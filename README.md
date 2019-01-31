@@ -159,3 +159,11 @@ Wifresti
 
 # Have questions?
 - Please visit https://github.com/rikonaka/katoolin4china/issues
+
+# Feature
+
+[ ] Automatically test mirror site speed and latency and choose the best one.
+
+[ ] Graphical interface implementation.
+
+[ ] Remove installed kali package.
