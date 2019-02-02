@@ -28,6 +28,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Start the new branch from katoolin.
 
-[Unreleased]: https://github.com/rikonaka/katoolin4china/compare/v1.6...HEAD
-[1.6]: https://github.com/rikonaka/katoolin4china/compare/v1.5...v1.6
-[1.5]: https://github.com/rikonaka/katoolin4china/compare/v1.2...v1.5
+[Unreleased]: https://github.com/rikonaka/katoolin4china/compare/1.6...HEAD
+[1.6]: https://github.com/rikonaka/katoolin4china/compare/1.5...1.6
+[1.5]: https://github.com/rikonaka/katoolin4china/compare/1.2...1.5
