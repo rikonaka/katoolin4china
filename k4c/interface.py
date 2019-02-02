@@ -62,7 +62,7 @@ def pstart():
     print(string)
 
 
-def pstart_1():
+def repo_setting():
     '''
     User select 1 in start menu
     '''

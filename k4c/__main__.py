@@ -25,7 +25,7 @@ def main():
         # Print logo
         interface.plogo()
         # Into loop
-        function.loop_1()
+        function.loop()
     except KeyboardInterrupt:
         print('\033[1;31mExit...Goodbye...\033[1;m')
         if os.path.exists('/etc/apt/sources.list.bak'):
