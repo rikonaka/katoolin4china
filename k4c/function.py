@@ -12,7 +12,7 @@ import os
 
 # Custom module
 from . import toollist
-from . import pstr
+from . import interface
 
 
 def init_apt():
@@ -69,33 +69,37 @@ def add_apt():
         print('Call error: {0}'.format(error_output))
 
 
-def loop_1():
+def loop():
 
     while True:
         # Print the start menu here
-        pstr.pstart()
+        interface.pstart()
         uselect = input('\033[1;36mkat > \033[1;m')
-        # 1) Kali repositories setting     (add the tuna repositories and update source file)
-        # 2) Install tools                 (show the kali tool menu)
-        # 3) Help                          (as you see)
-        # 4) Quit                          (quit the programer)
+        '''
+        1) Kali repositories setting     (add the tuna repositories)
+        2) Install tools                 (show the Kali tool menu)
+        3) Help                          (as you see)
+        4) Quit                          (quit the programer)
+        '''
         while uselect == '1':
-            pstr.pstart_1()
+            '''
+            1) Update                                      (execute the sudo apt-get update)
+            2) Remove all Kali repositories                (remove the Kali repositories)
+            3) View the contents of sources.list file      (show the sources.list)
+            4) Add Kali repositoried manual                (do it again)
+            '''
+            interface.repo_setting()
+            uselect_is_1 = input(
+                '\033[1;36mWhat do you want to do? > \033[1;m')
 
-            # 1) Update                                      (execute the sudo apt-get update)
-            # 2) Remove all kali repositories                (remove the kali repositories)
-            # 3) View the contents of sources.list file      (show the sources.list)
-            # 4) Add kali repositoried manual                (do it again)
-            uselect_1 = input('\033[1;36mWhat do you want to do? > \033[1;m')
-
-            if uselect_1 == '1':
+            if uselect_is_1 == '1':
                 try:
                     subprocess.check_call('apt-get update -m', shell=True)
                 except subprocess.CalledProcessError as error_output:
                     print('Apt error: {0}'.format(error_output))
                     sys.exit(1)
 
-            elif uselect_1 == '2':
+            elif uselect_is_1 == '2':
                 try:
                     subprocess.check_call(
                         'rm -f /etc/apt/sources.list', shell=True)
@@ -122,17 +126,18 @@ def loop_1():
                 print(
                     '\033[1;31m\nAll Kali repositories have been deleted!\n\033[1;m')
 
-            elif uselect_1 == 'back':
-                loop_1()
+            elif uselect_is_1 == 'back':
+                # main loop
+                loop()
 
-            elif uselect_1 == 'home':
-                loop_1()
+            elif uselect_is_1 == 'home':
+                loop()
 
-            elif uselect_1 == '3':
+            elif uselect_is_1 == '3':
                 file = open('/etc/apt/sources.list', 'r')
                 print(file.read())
 
-            elif uselect_1 == '4':
+            elif uselect_is_1 == '4':
                 add_apt()
 
             else:
@@ -142,12 +147,12 @@ def loop_1():
             loop_2()
 
         elif uselect == '3':
-            pstr.phelp()
+            interface.phelp()
 
         elif uselect == '4':
             try:
                 subprocess.check_call(
-                    'cp /etc/apt/sources.list.bak /etc/apt/sources.list.katoolin4cina', shell=True)
+                    'cp /etc/apt/sources.list.bak /etc/apt/sources.list.k4c', shell=True)
             except subprocess.CalledProcessError as error_output:
                 print('Make katoolin4china failed: {0}'.format(error_output))
 
@@ -211,10 +216,10 @@ def every_select(toolswitcher, specialtoolswitcher):
     eselect = input('\033[1;36mkat > \033[1;m')
 
     if eselect == 'back':
-        loop_1()
+        loop()
 
     elif eselect == 'home':
-        loop_1()
+        loop()
 
     elif eselect == '0':
         toollist = toolswitcher.values()
@@ -254,7 +259,7 @@ def loop_2():
     Install loop
     '''
 
-    pstr.pinstall()
+    interface.pinstall()
     # 1) Information Gathering            8) Exploitation Tools
     # 2) Vulnerability Analysis           9) Forensics Tools
     # 3) Wireless Attacks                 10) Stress Testing
@@ -268,10 +273,10 @@ def loop_2():
 
     uselect_2 = input('\033[1;36mkat > \033[1;m')
     if uselect_2 == 'back':
-        loop_1()
+        loop()
 
     elif uselect_2 == 'home':
-        loop_1()
+        loop()
 
     elif uselect_2 == 'r':
         # Remove all the tools
@@ -373,7 +378,7 @@ def loop_2():
 
     while uselect_2 == '1':
         # Show the menu of infromation gathering
-        pstr.pinstall_information()
+        interface.pinstall_information()
         switcher = toollist.information_gathering()
         special_switcher = {
             5: 'Use: wget http://www.morningstarsecurity.com/downloads/bing-ip2hosts-0.4.tar.gz && tar -xzvf bing-ip2hosts-0.4.tar.gz && cp bing-ip2hosts-0.4/bing-ip2hosts /usr/local/bin/'
@@ -382,7 +387,7 @@ def loop_2():
 
     while uselect_2 == '2':
         # Show the menu of Vulnerability Analysis
-        pstr.pinstall_vulnerability()
+        interface.pinstall_vulnerability()
         switcher = toollist.vulnerability_analysis()
         special_switcher = {
             8: 'Use: apt install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install',
@@ -393,7 +398,7 @@ def loop_2():
         every_select(switcher, special_switcher)
 
     while uselect_2 == '3':
-        pstr.pinstall_wireless()
+        interface.pinstall_wireless()
         switcher = toolist.wireless_attacks()
         special_switcher = {
             4: 'Use: apt install git && git clone git://git.kali.org/packages/bluemaho.git',
@@ -404,7 +409,7 @@ def loop_2():
         every_select(switcher, special_switcher)
 
     while uselect_2 == '4':
-        pstr.pinstall_web()
+        interface.pinstall_web()
         switcher = toollist.web_applications()
         special_switcher = {
             7: 'Use: apt install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install',
@@ -413,7 +418,7 @@ def loop_2():
         every_select(switcher, special_switcher)
 
     while uselect_2 == '5':
-        pstr.pinstall_sniffing()
+        interface.pinstall_sniffing()
         switcher = toollist.sniffing_spoofing()
         special_switcher = {
             9: 'Use: apt install git && git clone git://git.kali.org/packages/isr-evilgrade.git'
@@ -421,19 +426,19 @@ def loop_2():
         every_select(switcher, special_switcher)
 
     while uselect_2 == '6':
-        pstr.pinstall_maintaining()
+        interface.pinstall_maintaining()
         switcher = toollist.maintaining_access()
         special_switcher = {}
         every_select(switcher, special_switcher)
 
     while uselect_2 == '7':
-        pstr.pinstall_reporting()
+        interface.pinstall_reporting()
         switcher = toollist.reporting_tools()
         special_switcher = {}
         every_select(switcher, special_switcher)
 
     while uselect_2 == '8':
-        pstr.pinstall_exploitation()
+        interface.pinstall_exploitation()
         switcher = toollist.exploitation_tools()
         special_switcher = {
             8: 'Use: apt install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install'
@@ -441,7 +446,7 @@ def loop_2():
         every_select(switcher, special_switcher)
 
     while uselect_2 == '9':
-        pstr.pinstall_forensics()
+        interface.pinstall_forensics()
         switcher = toollist.forensics_tools()
         special_switcher = {
             3: 'Use: apt install git && git clone git://git.kali.org/packages/capstone.git',
@@ -450,7 +455,7 @@ def loop_2():
         every_select(switcher, special_switcher)
 
     while uselect_2 == '10':
-        pstr.pinstall_stress()
+        interface.pinstall_stress()
         switcher = toollist.stress_testing()
         special_switcher = {
             4: 'Use: apt install git && git clone git://git.kali.org/packages/inundator.git',
@@ -459,7 +464,7 @@ def loop_2():
         every_select(switcher, special_switcher)
 
     while uselect_2 == '11':
-        pstr.pinstall_password()
+        interface.pinstall_password()
         switcher = toollist.password_attacks()
         special_switcher = {
             9: 'Use: apt install git && git clone git://git.kali.org/packages/dbpwaudit.git',
@@ -470,19 +475,19 @@ def loop_2():
         every_select(switcher, special_switcher)
 
     while uselect_2 == '12':
-        pstr.pinstall_reverse()
+        interface.pinstall_reverse()
         switcher = toollist.reverse_engineering()
         special_switcher = {}
         every_select(switcher, special_switcher)
 
     while uselect_2 == '13':
-        pstr.pinstall_hardware()
+        interface.pinstall_hardware()
         switcher = toollist.hardware_hacking()
         special_switcher = {}
         every_select(switcher, special_switcher)
 
     while uselect_2 == '14':
-        pstr.pinstall_extra()
+        interface.pinstall_extra()
         switcher = toollist.extra()
         special_switcher = {
             1: 'Use: apt install git && git clone https://github.com/LionSec/wifresti.git && cp wifresti/wifresti.py /usr/bin/wifresti && chmod +x /usr/bin/wifresti && wifresti'

@@ -1,5 +1,8 @@
 # katoolin for China
-Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
+- Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
+- I also rewrote a list of functions and collation tools.
+- So there will be a lot of differences with the original version.
+- The new version uses a very convenient pip3 to install the program.
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -78,6 +81,8 @@ sudo pip3 install --upgrade .
 - Some software is no longer included in the latest version of the Kail
 - So we will NOT install it into you system(actually we also cound't found it '.deb' package)
 - But you can see at https://tools.kali.org/tools-listing
+
+---
 
 - Information Gathering
 
@@ -160,8 +165,15 @@ Wifresti
 # Warning
 - Before upgrade your system , please make sure you have removed all Kali-linux repositories in you /etc/apt/sources.list.
 
-# I have some questions
+# Have questions?
 - Please visit https://github.com/rikonaka/katoolin4china/issues
 
-# Contact
-- Email : xxy1836@gmail.com Jay
+# Feature
+
+- [x] Python3 and pip3 support.
+
+- [ ] Automatically test mirror site speed and latency and choose the best one.
+
+- [ ] Graphical interface implementation.
+
+- [ ] Remove installed kali package.

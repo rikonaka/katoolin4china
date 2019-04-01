@@ -6,7 +6,7 @@ import subprocess
 
 # Custom module here
 
-from . import pstr
+from . import interface
 from . import function
 
 
@@ -23,9 +23,9 @@ def main():
         # Init the apt sources.list
         function.init_apt()
         # Print logo
-        pstr.plogo()
+        interface.plogo()
         # Into loop
-        function.loop_1()
+        function.loop()
     except KeyboardInterrupt:
         print('\033[1;31mExit...Goodbye...\033[1;m')
         if os.path.exists('/etc/apt/sources.list.bak'):

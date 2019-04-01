@@ -7,11 +7,11 @@ setuptools.setup(
 
     name="k4c",
 
-    version="1.6",
+    version="1.61",
 
     license="GPL-2.0",
 
-    author="isinstance",
+    author="rikonaka",
     author_email="xxy1836@gmail.com",
 
     install_requires=[
