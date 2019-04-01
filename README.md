@@ -81,16 +81,14 @@ sudo pip3 install --upgrade .
 - So we will NOT install it into you system(actually we also cound't found it '.deb' package)
 - But you can see at https://tools.kali.org/tools-listing
 
----
-
-- Information Gathering
+## - Information Gathering
 
 ```
 bing-ip2hosts
 ntop
 ```
 
-- Vulnerability Analysis
+## - Vulnerability Analysis
 ```
 commix
 DBPwAudit
@@ -98,7 +96,7 @@ GSD
 Inguma
 ```
 
-- Wireless Attack
+## - Wireless Attack
 ```
 BlueMaho
 Bluepot
@@ -106,24 +104,24 @@ Gqrx
 gr-scan
 ```
 
-- Web Applications
+## - Web Applications
 ```
 Cutycapt
 Webshag
 WebSlayer
 ```
 
-- Sniffing & Spoofing
+## - Sniffing & Spoofing
 ```
 isr-svilgrade
 ```
 
-- Exploitation Tools
+## - Exploitation Tools
 ```
 Nishange
 ```
 
-- Forensics Tools
+## - Forensics Tools
 ```
 Capstone
 DFF
@@ -131,12 +129,12 @@ diStorm3
 RegRipper
 ```
 
-- Stress Testing
+## - Stress Testing
 ```
 Inundator
 ```
 
-- Password Attacks
+## - Password Attacks
 ```
 DBPwAudit
 THC-Hydra
@@ -144,7 +142,7 @@ phrasendrescher
 SQLdict
 ```
 
-- Extra
+## - Extra
 ```
 Wifresti
 ```
