@@ -1,6 +1,14 @@
 # katoolin for China
 Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
 
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+## Support the legitimate rights and interests of programmers
+
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
+[![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+
 ```
  $$\   $$\             $$\                         $$\ $$\
  $$ | $$  |            $$ |                        $$ |\__|
