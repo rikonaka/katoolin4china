@@ -1,22 +1,29 @@
 # katoolin for China
+
+## What can this code do
+
 - Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
-- I also rewrote a list of functions and collation tools.
+
+- Also, I rewrote a list of functions and collation tools.
+
 - So there will be a lot of differences with the original version.
+
 - The new version uses a very convenient pip3 to install the program.
 
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+---
+
 ## Support the legitimate rights and interests of programmers
 
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+Supporting the 996 prohibited license while not violating the GPLv2.0 license.
 
-[![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) [![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 ```
  $$\   $$\             $$\                         $$\ $$\
  $$ | $$  |            $$ |                        $$ |\__|
  $$ |$$  /  $$$$$$\  $$$$$$\    $$$$$$\   $$$$$$\  $$ |$$\ $$$$$$$\
  $$$$$  /   \____$$\ \_$$  _|  $$  __$$\ $$  __$$\ $$ |$$ |$$  __$$\
- $$  $$<    $$$$$$$ |  Kali tools installer |$$ |$$ |$$ |  $$ |
+ $$  $$<    $$$$$$$ |  Kali tools installer |  $$ |$$ |$$ |      $$ |
  $$ |\$$\  $$  __$$ |  $$ |$$\ $$ |  $$ |$$ |  $$ |$$ |$$ |$$ |  $$ |
  $$ | \$$\ \$$$$$$$ |  \$$$$  |\$$$$$$  |\$$$$$$  |$$ |$$ |$$ |  $$ |
  \__|  \__| \_______|   \____/  \______/  \______/ \__|\__|\__|  \__|
@@ -35,16 +42,22 @@
 ![k4c](https://github.com/rikonaka/katoolin4china/blob/master/pic/howtouse.gif)
 
 # Requirements
-- Python 3.5 or later
+
+- Python 3.5 or later.
+
 - pip for Python3
-- An operating system (tested on Ubuntu, but not tested on Debian)
+
+- An Debian and its derivatives operating system
+
 - Not supprot CentOS or Redhat or Fedora
 
 # Installation
+
 - Here is a simple installation way use the pip
 
 ```
 sudo apt-get install git
+
 git clone https://github.com/rikonaka/katoolin4china.git
 cd katoolin4china
 sudo pip3 install .
@@ -53,6 +66,7 @@ sudo pip3 install .
 - After this command, the k4c will installed in you system
 
 # Uninstallation
+
 - Here is a simple uninstallation way
 
 ```
@@ -61,6 +75,7 @@ rm -rf katoolin4china/
 ```
 
 # Use-The-Tool
+
 - Just input the k4c like this
 
 ```
@@ -77,18 +92,20 @@ sudo pip3 install --upgrade .
 
 # Not-Support-Tool-List
 
-- Some software is no longer included in the latest version of the Kail
-- So we will NOT install it into you system(actually we also cound't found it '.deb' package)
-- But you can see at https://tools.kali.org/tools-listing
+- Some software is no longer included in the latest version of the Kail.
 
-### - Information Gathering
+- So we will NOT install it into you system (actually we also cound't found it's .deb package).
+
+- But you can see them at https://tools.kali.org/tools-listing (because the maintenance staff of the Kali website is lazy).
+
+## - Information Gathering
 
 ```
 bing-ip2hosts
 ntop
 ```
 
-### - Vulnerability Analysis
+## - Vulnerability Analysis
 ```
 commix
 DBPwAudit
@@ -96,7 +113,7 @@ GSD
 Inguma
 ```
 
-### - Wireless Attack
+## - Wireless Attack
 ```
 BlueMaho
 Bluepot
@@ -104,24 +121,24 @@ Gqrx
 gr-scan
 ```
 
-### - Web Applications
+## - Web Applications
 ```
 Cutycapt
 Webshag
 WebSlayer
 ```
 
-### - Sniffing & Spoofing
+## - Sniffing & Spoofing
 ```
 isr-svilgrade
 ```
 
-### - Exploitation Tools
+## - Exploitation Tools
 ```
 Nishange
 ```
 
-### - Forensics Tools
+## - Forensics Tools
 ```
 Capstone
 DFF
@@ -129,12 +146,12 @@ diStorm3
 RegRipper
 ```
 
-### - Stress Testing
+## - Stress Testing
 ```
 Inundator
 ```
 
-### - Password Attacks
+## - Password Attacks
 ```
 DBPwAudit
 THC-Hydra
@@ -142,30 +159,30 @@ phrasendrescher
 SQLdict
 ```
 
-### - Extra
+## - Extra
 ```
 Wifresti
 ```
 
-# Video
-- Not have yet
+---
 
-# Usage
-- Typing the number of a tool will install it
-- Typing 0 will install all Kali tools
-- By installing armitage , you will install metasploit
+# Other
 
-# Hotkey
+## Hotkey
+
 - back : Go back
+
 - home : Go to the main menu
 
-# Warning
+## Warning
+
 - Before upgrade your system , please make sure you have removed all Kali-linux repositories in you /etc/apt/sources.list.
 
-# Have questions?
+## Have questions?
+
 - Please visit https://github.com/rikonaka/katoolin4china/issues
 
-# Feature
+## Feature
 
 - [x] Python3 and pip3 support.
 
@@ -173,4 +190,4 @@ Wifresti
 
 - [ ] Graphical interface implementation.
 
-- [ ] Remove installed kali package.
+- [ ] Check installed kali package.

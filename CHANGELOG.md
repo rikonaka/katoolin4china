@@ -6,7 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- Start using "loop()" over "loop_1()" in function.py.
 - Start using "uselect_is_1" over "uselect_1" in function.py loop() function.
 
 ## [1.6] - 2018-12-13

@@ -17,9 +17,9 @@ from . import interface
 
 def init_apt():
     '''
-    Change the /etc/apt/sources.list here
+    change the /etc/apt/sources.list here
 
-    Add the tuna repositories
+    add the tuna repositories
     '''
 
     try:
@@ -51,7 +51,7 @@ def init_apt():
 
 def add_apt():
     '''
-    Add the repositories manual
+    add the repositories manual
     '''
 
     try:
@@ -69,7 +69,7 @@ def add_apt():
         print('Call error: {0}'.format(error_output))
 
 
-def loop():
+def loop_1():
 
     while True:
         # Print the start menu here
@@ -128,10 +128,10 @@ def loop():
 
             elif uselect_is_1 == 'back':
                 # main loop
-                loop()
+                loop_1()
 
             elif uselect_is_1 == 'home':
-                loop()
+                loop_1()
 
             elif uselect_is_1 == '3':
                 file = open('/etc/apt/sources.list', 'r')
@@ -216,10 +216,10 @@ def every_select(toolswitcher, specialtoolswitcher):
     eselect = input('\033[1;36mkat > \033[1;m')
 
     if eselect == 'back':
-        loop()
+        loop_1()
 
     elif eselect == 'home':
-        loop()
+        loop_1()
 
     elif eselect == '0':
         toollist = toolswitcher.values()
@@ -273,10 +273,10 @@ def loop_2():
 
     uselect_2 = input('\033[1;36mkat > \033[1;m')
     if uselect_2 == 'back':
-        loop()
+        loop_1()
 
     elif uselect_2 == 'home':
-        loop()
+        loop_1()
 
     elif uselect_2 == 'r':
         # Remove all the tools
