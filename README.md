@@ -57,7 +57,6 @@ Supporting the 996 prohibited license while not violating the GPLv2.0 license.
 
 ```
 sudo apt-get install git
-
 git clone https://github.com/rikonaka/katoolin4china.git
 cd katoolin4china
 sudo pip3 install .
