@@ -44,7 +44,7 @@ def init_apt():
     try:
         # Add the repositories in /etc/apt/sources.list
         subprocess.check_call(
-            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
+            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\ndeb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\n' >> /etc/apt/sources.list", shell=True)
     except subprocess.CalledProcessError as error_output:
         print('Call error: {0}'.format(error_output))
 
@@ -64,7 +64,7 @@ def add_apt():
     try:
         # Add the repositories in /etc/apt/sources.list
         subprocess.check_call(
-            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list", shell=True)
+            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\ndeb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\n' >> /etc/apt/sources.list", shell=True)
     except subprocess.CalledProcessError as error_output:
         print('Call error: {0}'.format(error_output))
 
@@ -89,17 +89,17 @@ def loop_1():
             4) Add Kali repositoried manual                (do it again)
             '''
             interface.repo_setting()
-            uselect_is_1 = input(
+            uselect_1 = input(
                 '\033[1;36mWhat do you want to do? > \033[1;m')
 
-            if uselect_is_1 == '1':
+            if uselect_1 == '1':
                 try:
                     subprocess.check_call('apt-get update -m', shell=True)
                 except subprocess.CalledProcessError as error_output:
                     print('Apt error: {0}'.format(error_output))
                     sys.exit(1)
 
-            elif uselect_is_1 == '2':
+            elif uselect_1 == '2':
                 try:
                     subprocess.check_call(
                         'rm -f /etc/apt/sources.list', shell=True)
@@ -126,18 +126,18 @@ def loop_1():
                 print(
                     '\033[1;31m\nAll Kali repositories have been deleted!\n\033[1;m')
 
-            elif uselect_is_1 == 'back':
+            elif uselect_1 == 'back':
                 # main loop
                 loop_1()
 
-            elif uselect_is_1 == 'home':
+            elif uselect_1 == 'home':
                 loop_1()
 
-            elif uselect_is_1 == '3':
+            elif uselect_1 == '3':
                 file = open('/etc/apt/sources.list', 'r')
                 print(file.read())
 
-            elif uselect_is_1 == '4':
+            elif uselect_1 == '4':
                 add_apt()
 
             else:

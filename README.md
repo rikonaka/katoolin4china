@@ -1,5 +1,26 @@
 # katoolin for China
 
+```bash
+ $$\   $$\             $$\                         $$\ $$\
+ $$ | $$  |            $$ |                        $$ |\__|
+ $$ |$$  /  $$$$$$\  $$$$$$\    $$$$$$\   $$$$$$\  $$ |$$\ $$$$$$$\
+ $$$$$  /   \____$$\ \_$$  _|  $$  __$$\ $$  __$$\ $$ |$$ |$$  __$$\
+ $$  $$<    $$$$$$$ |  Kali tools installer |  $$ |$$ |$$ |      $$ |
+ $$ |\$$\  $$  __$$ |  $$ |$$\ $$ |  $$ |$$ |  $$ |$$ |$$ |$$ |  $$ |
+ $$ | \$$\ \$$$$$$$ |  \$$$$  |\$$$$$$  |\$$$$$$  |$$ |$$ |$$ |  $$ |
+ \__|  \__| \_______|   \____/  \______/  \______/ \__|\__|\__|  \__|
+
+
+               $$\                          $$$$$$$\ $$\
+              $$  |                        $$ ______|$$ |     $$\
+             $$  /_           $$    $$\   $$ /       $$ \     \__|         $$$$$$$\
+          $$$$$$$  | $$$$$$\  $$\ $$ /    $$ |       $$$$$$\  $$\ $$$$$$ \ \_____$$\
+            $$  __/ $$    $$\ $$$$ _/     $$ \       $$\__$$\ $$ |$$\__$$ | $$$$$$$ |
+            $$ |    $$    $$ |$$  /       \$$ \      $$ | $$ |$$ |$$ | $$ |$$    $$ |
+            $$ |    \$$$$$$$ |$$ |         \$$$$$$$$\$$ | $$ |$$ |$$ | $$ |\$$$$$$$ |
+            \__|     \_______|\__|          \_______|\__| \__|\__|\__|  \_| \_______|
+```
+
 ## What can this code do
 
 - Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
@@ -18,38 +39,31 @@ Supporting the 996 prohibited license while not violating the GPLv2.0 license.
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) [![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
-```
- $$\   $$\             $$\                         $$\ $$\
- $$ | $$  |            $$ |                        $$ |\__|
- $$ |$$  /  $$$$$$\  $$$$$$\    $$$$$$\   $$$$$$\  $$ |$$\ $$$$$$$\
- $$$$$  /   \____$$\ \_$$  _|  $$  __$$\ $$  __$$\ $$ |$$ |$$  __$$\
- $$  $$<    $$$$$$$ |  Kali tools installer |  $$ |$$ |$$ |      $$ |
- $$ |\$$\  $$  __$$ |  $$ |$$\ $$ |  $$ |$$ |  $$ |$$ |$$ |$$ |  $$ |
- $$ | \$$\ \$$$$$$$ |  \$$$$  |\$$$$$$  |\$$$$$$  |$$ |$$ |$$ |  $$ |
- \__|  \__| \_______|   \____/  \______/  \______/ \__|\__|\__|  \__|
-
-
-               $$\                          $$$$$$$\ $$\
-              $$  |                        $$ ______|$$ |     $$\
-             $$  /_           $$    $$\   $$ /       $$ \     \__|         $$$$$$$\
-          $$$$$$$  | $$$$$$\  $$\ $$ /    $$ |       $$$$$$\  $$\ $$$$$$ \ \_____$$\
-            $$  __/ $$    $$\ $$$$ _/     $$ \       $$\__$$\ $$ |$$\__$$ | $$$$$$$ |
-            $$ |    $$    $$ |$$  /       \$$ \      $$ | $$ |$$ |$$ | $$ |$$    $$ |
-            $$ |    \$$$$$$$ |$$ |         \$$$$$$$$\$$ | $$ |$$ |$$ | $$ |\$$$$$$$ |
-            \__|     \_______|\__|          \_______|\__| \__|\__|\__|  \_| \_______| 
-```
-
-![k4c](https://github.com/rikonaka/katoolin4china/blob/master/pic/howtouse.gif)
-
 # Requirements
 
 - Python 3.5 or later.
 
-- pip for Python3
+- pip3 for Python3.
 
-- An Debian and its derivatives operating system
+- An Debian and its derivatives operating system.
 
-- Not supprot CentOS or Redhat or Fedora
+- Not supprot CentOS or RedHat or Fedora.
+
+## Tested-Distribution
+
+Distribution that have been tested and test videos will put here.
+
+- <del>Ubuntu12.04</del> (Not support, too old)
+
+- <del>Ubuntu14.04</del> (Not support, too old)
+
+- Ubuntu16.04 (![ubuntu16.04 test video](xxxxxxxxxxxxxxxxxxx))
+
+- Ubuntu18.04 (![ubuntu18.04 test video](xxxxxxxxxxxxxxxxxxx))
+
+- Ubuntu18.10 (![ubuntu18.10 test video](xxxxxxxxxxxxxxxxxxx))
+
+- Ubuntu19.04 (![ubuntu19.04 test video](xxxxxxxxxxxxxxxxxxx))
 
 # Installation
 
@@ -166,6 +180,10 @@ Wifresti
 ---
 
 # Other
+
+## Installation-GIF
+
+![how to install](https://github.com/rikonaka/katoolin4china/blob/master/pic/howtouse.gif)
 
 ## Hotkey
 
