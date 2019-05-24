@@ -7,7 +7,7 @@ setuptools.setup(
 
     name="k4c",
 
-    version="1.61",
+    version="1.7",
 
     license="GPL-2.0",
 

@@ -69,103 +69,73 @@ def add_apt():
         print('Call error: {0}'.format(error_output))
 
 
-def loop_1():
+def loop_repo_setting():
 
     while True:
-        # Print the start menu here
-        interface.pstart()
-        uselect = input('\033[1;36mkat > \033[1;m')
+        interface.repo_setting()
         '''
-        1) Kali repositories setting     (add the tuna repositories)
-        2) Install tools                 (show the Kali tool menu)
-        3) Help                          (as you see)
-        4) Quit                          (quit the programer)
+        1) Update                                      (execute the sudo apt-get update)
+        2) Remove all Kali repositories                (remove the Kali repositories)
+        3) View the contents of sources.list file      (show the sources.list)
+        4) Add Kali repositoried manual                (do it again)
         '''
-        while uselect == '1':
-            '''
-            1) Update                                      (execute the sudo apt-get update)
-            2) Remove all Kali repositories                (remove the Kali repositories)
-            3) View the contents of sources.list file      (show the sources.list)
-            4) Add Kali repositoried manual                (do it again)
-            '''
-            interface.repo_setting()
-            uselect_1 = input(
-                '\033[1;36mWhat do you want to do? > \033[1;m')
 
-            if uselect_1 == '1':
-                try:
-                    subprocess.check_call('apt-get update -m', shell=True)
-                except subprocess.CalledProcessError as error_output:
-                    print('Apt error: {0}'.format(error_output))
-                    sys.exit(1)
+        uselect = input(
+            '\033[1;36mWhat do you want to do? > \033[1;m')
 
-            elif uselect_1 == '2':
-                try:
-                    subprocess.check_call(
-                        'rm -f /etc/apt/sources.list', shell=True)
-                except subprocess.CalledProcessError as error_output:
-                    print(
-                        'Remove the /etc/apt/sources.list failed: {0}'.format(error_output))
-                    sys.exit(1)
+        if uselect == '1':
+            try:
+                subprocess.check_call('apt-get update -m', shell=True)
+            except subprocess.CalledProcessError as error_output:
+                print('Apt error: {0}'.format(error_output))
+                sys.exit(1)
 
-                try:
-                    subprocess.check_call(
-                        'cp /etc/apt/sources.list.bak /etc/apt/sources.list', shell=True)
-                except subprocess.CalledProcessError as error_output:
-                    print('Copy back up file failed: {0}'.format(error_output))
-                    sys.exit(1)
-
-                try:
-                    subprocess.check_call(
-                        'mv /etc/apt/sources.list.bak /etc/apt/sources.list.katoolin4cina', shell=True)
-                except subprocess.CalledProcessError as error_output:
-                    print('Katoolin4china backup filed: {0}'.format(
-                        error_output))
-                    sys.exit(1)
-
-                print(
-                    '\033[1;31m\nAll Kali repositories have been deleted!\n\033[1;m')
-
-            elif uselect_1 == 'back':
-                # main loop
-                loop_1()
-
-            elif uselect_1 == 'home':
-                loop_1()
-
-            elif uselect_1 == '3':
-                file = open('/etc/apt/sources.list', 'r')
-                print(file.read())
-
-            elif uselect_1 == '4':
-                add_apt()
-
-            else:
-                print('\033[1;31mSorry, that was an invalid command!\033[1;m')
-
-        if uselect == '2':
-            loop_2()
-
-        elif uselect == '3':
-            interface.phelp()
-
-        elif uselect == '4':
+        elif uselect == '2':
             try:
                 subprocess.check_call(
-                    'cp /etc/apt/sources.list.bak /etc/apt/sources.list.k4c', shell=True)
+                    'rm -f /etc/apt/sources.list', shell=True)
             except subprocess.CalledProcessError as error_output:
-                print('Make katoolin4china failed: {0}'.format(error_output))
+                print(
+                    'Remove the /etc/apt/sources.list failed: {0}'.format(error_output))
+                sys.exit(1)
 
             try:
                 subprocess.check_call(
                     'cp /etc/apt/sources.list.bak /etc/apt/sources.list', shell=True)
             except subprocess.CalledProcessError as error_output:
-                print(
-                    'Copy /etc/apt/sources.list.bak failed: {0}'.format(error_output))
+                print('Copy back up file failed: {0}'.format(error_output))
+                sys.exit(1)
+
+            try:
+                subprocess.check_call(
+                    'mv /etc/apt/sources.list.bak /etc/apt/sources.list.katoolin4cina', shell=True)
+            except subprocess.CalledProcessError as error_output:
+                print('Katoolin4china backup filed: {0}'.format(
+                    error_output))
+                sys.exit(1)
 
             print(
-                '\033[1;31m\nAll Kali repositories have been deleted !\n\033[1;m')
-            sys.exit(0)
+                '\033[1;31m\nAll Kali repositories have been deleted!\n\033[1;m')
+
+        elif uselect == '3':
+            with open('/etc/apt/sources.list', 'r') as file:
+                print(file.read())
+
+        elif uselect == '4':
+            add_apt()
+
+        elif uselect == 'back':
+            # main loop
+            # loop()
+            # now return to the main loop
+            return
+
+        elif uselect == 'home':
+            # loop()
+            return
+
+        else:
+            print('\033[1;31mSorry, that was an invalid command!\033[1;m')
 
 
 def install_all(toollist):
@@ -192,18 +162,21 @@ def uninstall_all(toolist):
     '''
     Uninstall all the tools in toolist
     '''
+    count = 1
+    length = len(toolist)
 
     for tool in toolist:
         # Some unsupport package dict.values() return 0
         if tool != 0:
             print(
-                '\033[1;36mRemove\033[1;m \033[1;32m{0}\033[1;m'.format(tool))
+                '\033[1;36mRemove\033[1;m \033[1;32m{0}    {1}/{2}\033[1;m'.format(tool, count, length))
             try:
                 subprocess.check_call(
                     'apt -y autoremove {0}'.format(tool), shell=True)
             except subprocess.CalledProcessError as error_output:
                 print('Remove the {0} failed: {1}'.format(
                     tool, error_output))
+            count += 1
 
 
 def every_select(toolswitcher, specialtoolswitcher):
@@ -216,10 +189,10 @@ def every_select(toolswitcher, specialtoolswitcher):
     eselect = input('\033[1;36mkat > \033[1;m')
 
     if eselect == 'back':
-        loop_1()
+        loop()
 
     elif eselect == 'home':
-        loop_1()
+        loop()
 
     elif eselect == '0':
         toollist = toolswitcher.values()
@@ -254,7 +227,7 @@ def every_select(toolswitcher, specialtoolswitcher):
             print('\033[1;31mInvalid command!\033[1;m')
 
 
-def loop_2():
+def loop_install():
     '''
     Install loop
     '''
@@ -273,10 +246,12 @@ def loop_2():
 
     uselect_2 = input('\033[1;36mkat > \033[1;m')
     if uselect_2 == 'back':
-        loop_1()
+        # loop()
+        return
 
     elif uselect_2 == 'home':
-        loop_1()
+        # loop()
+        return
 
     elif uselect_2 == 'r':
         # Remove all the tools
@@ -399,7 +374,7 @@ def loop_2():
 
     while uselect_2 == '3':
         interface.pinstall_wireless()
-        switcher = toolist.wireless_attacks()
+        switcher = toollist.wireless_attacks()
         special_switcher = {
             4: 'Use: apt install git && git clone git://git.kali.org/packages/bluemaho.git',
             5: 'Use apt install git && git clone git://git.kali.org/packages/bluepot.git',
@@ -493,3 +468,54 @@ def loop_2():
             1: 'Use: apt install git && git clone https://github.com/LionSec/wifresti.git && cp wifresti/wifresti.py /usr/bin/wifresti && chmod +x /usr/bin/wifresti && wifresti'
         }
         every_select(switcher, special_switcher)
+
+
+def init_exit():
+
+    try:
+        subprocess.check_call(
+            'cp /etc/apt/sources.list.bak /etc/apt/sources.list.k4c', shell=True)
+    except subprocess.CalledProcessError as error_output:
+        print('Make katoolin4china failed: {0}'.format(error_output))
+
+    try:
+        subprocess.check_call(
+            'cp /etc/apt/sources.list.bak /etc/apt/sources.list', shell=True)
+    except subprocess.CalledProcessError as error_output:
+        print(
+            'Copy /etc/apt/sources.list.bak failed: {0}'.format(error_output))
+
+    print(
+        '\033[1;31m\nAll Kali repositories have been deleted !\n\033[1;m')
+
+
+def loop():
+
+    while True:
+        # Print the start menu here
+        interface.pstart()
+        '''
+        1) Kali repositories setting     (add the tuna repositories)
+        2) Install tools                 (show the Kali tool menu)
+        3) Help                          (as you see)
+        4) Quit                          (quit the programer)
+        '''
+        try:
+            uselect = input('\033[1;36mkat > \033[1;m')
+        except EOFError:
+            # for CTRL-D
+            init_exit()
+            sys.exit(0)
+
+        if uselect == '1':
+            loop_repo_setting()
+
+        elif uselect == '2':
+            loop_install()
+
+        elif uselect == '3':
+            interface.phelp()
+
+        elif uselect == '4':
+            init_exit()
+            sys.exit(0)
