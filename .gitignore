@@ -54,4 +54,3 @@ dkms.conf
 # myself
 *.pyc
 .vscode
-.vscode/settings.json
