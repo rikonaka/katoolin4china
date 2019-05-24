@@ -82,7 +82,7 @@ So we will NOT install it into you system (actually we also cound't found it's .
 
 But you can see them at `https://tools.kali.org/tools-listing` (because the maintenance staff of the Kali website is lazy).
 
-If you want the technical information detail, please visit this https://rikonaka.github.io/katoolin4china/.
+If you want the technical information detail, please visit https://rikonaka.github.io/katoolin4china/.
 
 ## Warning
 
