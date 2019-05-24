@@ -77,8 +77,11 @@ sudo pip3 install --upgrade .
 ## Not Support Tool List
 
 Some software is no longer included in the latest version of the Kail.
+
 So we will NOT install it into you system (actually we also cound't found it's .deb package).
+
 But you can see them at `https://tools.kali.org/tools-listing` (because the maintenance staff of the Kali website is lazy).
+
 If you want the technical information detail, please visit this ![page](https://rikonaka.github.io/katoolin4china/).
 
 ## Warning
