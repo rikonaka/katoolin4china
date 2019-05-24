@@ -251,7 +251,364 @@ Draw the ~~strikethrough~~ is not supported.
 - **cewl**
 - **crunch**
 - **hashcat**
+- **john**
+- **johnny**
+- **medusa**
+- **ncrack**
+- **ophcrack**
+- **rainbowcrack**
+- **rcracki_mt**
+- **wordlists**
 
+### Offline Attacks
+
+- cachedump
+- chntpw
+- cmospwd
+- fcrackzip
+- hashcat
+- hashid
+- hash-identifier
+- johnny
+- lsadump
+- ophcrack-cli
+- pwdump
+- rainbowcrack
+- rcracki_mt
+- samdump2
+- sipcrack
+- sucrack
+- truecrack
+
+### Online Attacks
+
+- cisco-auditing-tool
+- findmyhash
+- hydra
+- hydra-gtk
+- keimpx
+- onesixtyone
+- patator
+- thc-pptp-bruter
+
+### Passing the Hash tools
+
+- mimikatz
+- pth-curl
+- pth-net
+- pth-openchangeclient
+- pth-rpcclient
+- pth-smbclient
+- pth-smbget
+- pth-sqsh
+- pth-winexe
+- pth-wmic
+- pth-wmis
+- pth-xfreerdp
+- smbmap
+
+### Password Profiling & Wordlists
+
+- cewl
+- crunch
+- maskgen
+- policygen
+- rsmangler
+- statsgen
+- wordlists
+
+---
+
+## Wireless Attacks
+
+- **aircrack-ng**
+- **chirp**
+- **cowpatty**
+- **fern wifi cracker**
+- **ghost phisher**
+- **giskismet**
+- **kismet**
+- **mdk3**
+- **mfoc**
+- **mfterm**
+- **pixiewps**
+- **reaver**
+- **wifite**
+
+### 802.11 Wireless Tools
+
+- asleap
+- bully
+- cowpatty
+- eapmd5pass
+- fern wifi cracker
+- giskismet
+- wifiarp
+- wifidns
+- wifi-honey
+- wifiping
+- wifitap
+
+### Buletooth Tools
+
+- bluelog
+- blueranger
+- bluesnarfer
+- btscanner
+- redfang
+- spooftooph
+
+### Other Wireless Tools
+
+- hackrf-info
+- zbassocflood
+- zbdsniff
+- zbdump
+- zbfind
+- zbgoodfind
+- zbreplay
+- zbstumbler
+
+
+### RFID & NFC Tools
+
+- mfcuk
+- mfoc
+- mfterm
+- mifare-classic-format
+- nfc-list
+- nfc-mfclassic
+
+### Softward Defined Radio
+
+- chirp
+
+---
+
+## Reverse Engineering
+
+- **apktool**
+- **clang**
+_ **clang++**
+- **dex2jar**
+- **edb-debugger**
+- **flasm**
+- **jad**
+- **javasnoop**
+- **NASM shell**
+- **olldbg**
+- **radare2**
+
+---
+
+## Exploitation Tools
+
+- **armitage**
+- **beef xss framework**
+- **metasploit framework**
+- **msf payload creator**
+- **searchsploit**
+- **social engineering toolkit**
+- **sqlmap**
+- **termineter**
+
+---
+
+## Sniffing & Spoofing
+
+- **bdfproxy**
+- **driftnet**
+- **ettercap-graphical**
+- **hamster**
+- **macchanger**
+- **mitmproxy**
+- **netsniff-ng**
+- **responder**
+- **wireshark**
+
+### Network Sniffers
+
+- darkstat
+- dnschef
+- dsniff
+- hexinject
+- netsniff-ng
+- nfspy
+- sslsniff
+- tcpflow
+
+
+### Spoofing and MITM
+
+- dnschef
+- fiked
+- nfspy
+- rebind
+- sniffjoke
+- sslsplit
+- sslstrip
+- tcpreplay
+- wifi-honey
+- yersinia
+
+
+---
+
+## Post Exploitation
+
+- **backdoor-factory**
+- **bdfproxy**
+- **exe2hex**
+- **intersect**
+- **mimikatz**
+- **nishang**
+- **powersploit**
+- **proxychains**
+- **weevely**
+
+### OS Backdoors
+
+- cymothoa
+- dbd
+- intersect
+- powersploit
+- sbd
+- u3-pwn
+
+### Tunneling & Exfiltration
+
+- dbd
+- dns2tcpc
+- dns2tcpd
+- exe2hex
+- iodine
+- miredo
+- proxychains
+- proxytunnel
+- ptunnel
+- pwnat
+- sslh
+- stunnel4
+- udptunnel
+
+
+### web Bakcdoors
+
+- laudanum
+- nishang
+- webacoo
+- weevely
+
+---
+
+## Forensics
+
+- **autopsy**
+- **binwalk**
+- **bulk_extractor**
+- **chkrootkit**
+- **foremost**
+- **galleta**
+- **hashdeep**
+- **volafox**
+- **volatility**
+
+### Digital Forensics
+
+- dc3dd
+- dcfldd
+- extundelete
+- missidentify
+- pdgmail
+- readpst
+- reglookup
+- regripper
+- vinetto
+
+### Forensic Carving Tools
+
+- foremost
+- magicrescue
+- pasco
+- pev
+- recoerjpeg
+- rifiuti
+- rifiuti2
+- safecopy
+- scalpel
+- scrounge-ntfs
+
+### Forensic Imaging Tools
+
+- affcat
+- dc3dd
+- dcfldd
+- ddrescue
+- ewfacquire
+- guymager
+
+### PDF Forensics Tools
+
+- pdfid
+- pdf-parser
+- peepdf
+
+### Sleuth Kit Suite
+
+- autospu
+- blkcalc
+- blkcat
+- blkls
+- blkstat
+- ffind
+- fls
+- fsstat
+- hfind
+- icat-sleuthkit
+- ifind
+- ils-sleuthkit
+- img_cat
+- img_stat
+- istat
+- jcat
+- jls
+- mactime-sleuthkit
+- mmcat
+- mmstat
+- sigfind
+- sorter
+- srch_strings
+- tsk_comparedir
+- tsk_gettimes
+- tsk_loaddb
+- tsk_recover
+
+---
+
+## Reporting Tools
+
+- **cutycapt**
+- **dradis framework**
+- **faraday IDE**
+- **maltego**
+- **pipal**
+- **recordmydesktop**
+
+---
+
+## Social Engineering Tools
+
+- backdoor-factory
+- beef xss framework
+- ghost phisher
+- maltego
+- msf payload creator
+- social engineering toolkit
+- u3-pwn
+
+---
+
+## Information Gathering
 ```bash
 bing-ip2hosts
 ntop
@@ -315,9 +672,3 @@ SQLdict
 ```
 Wifresti
 ```
-
-# Hotkey
-
-- back: Go back
-
-- home: Go to the main menu

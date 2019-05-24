@@ -10,8 +10,6 @@
 
 - The new version uses a very convenient pip3 to install the program.
 
----
-
 ## Support the legitimate rights and interests of programmers
 
 Supporting the 996 prohibited license while not violating the GPLv2.0 license.
