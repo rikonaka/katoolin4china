@@ -40,7 +40,7 @@ Distribution that have been tested and test videos will put here.
 
 Here is a simple installation way use the pip
 
-![how to install](https://github.com/rikonaka/katoolin4china/blob/master/pic/howtouse.gif)
+![how to install](pic/howtouse.gif)
 
 ```bash
 sudo apt-get install git
