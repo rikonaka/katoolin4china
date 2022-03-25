@@ -14,6 +14,25 @@ import os
 from . import toollist
 from . import interface
 
+def add_apt():
+    '''
+    add the repositories manual
+    '''
+
+    try:
+        # Here we back up the original config file
+        subprocess.check_call(
+            'cp /etc/apt/sources.list /etc/apt/sources.list.bak', shell=True)
+    except subprocess.CalledProcessError as error_output:
+        print('Copy apt file error: {0}'.format(error_output))
+
+    try:
+        # Add the repositories in /etc/apt/sources.list
+        subprocess.check_call(
+            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\ndeb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\n' >> /etc/apt/sources.list", shell=True)
+    except subprocess.CalledProcessError as error_output:
+        print('Call error: {0}'.format(error_output))
+
 
 def init_apt():
     '''
@@ -33,40 +52,23 @@ def init_apt():
             'apt-key adv --keyserver keys.gnupg.net --recv-keys 7D8D0BF6', shell=True)
     except subprocess.CalledProcessError as error_output:
         print('Call error: {0}'.format(error_output))
+    
+    add_apt()
+    
+    # try:
+    #     # Here we back up the original config file
+    #     subprocess.check_call(
+    #         'cp /etc/apt/sources.list /etc/apt/sources.list.bak', shell=True)
+    # except subprocess.CalledProcessError as error_output:
+    #     print('Copy apt file error: {0}'.format(error_output))
 
-    try:
-        # Here we back up the original config file
-        subprocess.check_call(
-            'cp /etc/apt/sources.list /etc/apt/sources.list.bak', shell=True)
-    except subprocess.CalledProcessError as error_output:
-        print('Copy apt file error: {0}'.format(error_output))
+    # try:
+    #     # Add the repositories in /etc/apt/sources.list
+    #     subprocess.check_call(
+    #         "echo '# Kali repositories in China | Added by Katoolin4China\ndeb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\ndeb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\n' >> /etc/apt/sources.list", shell=True)
+    # except subprocess.CalledProcessError as error_output:
+    #     print('Call error: {0}'.format(error_output))
 
-    try:
-        # Add the repositories in /etc/apt/sources.list
-        subprocess.check_call(
-            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\ndeb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\n' >> /etc/apt/sources.list", shell=True)
-    except subprocess.CalledProcessError as error_output:
-        print('Call error: {0}'.format(error_output))
-
-
-def add_apt():
-    '''
-    add the repositories manual
-    '''
-
-    try:
-        # Here we back up the original config file
-        subprocess.check_call(
-            'cp /etc/apt/sources.list /etc/apt/sources.list.bak', shell=True)
-    except subprocess.CalledProcessError as error_output:
-        print('Copy apt file error: {0}'.format(error_output))
-
-    try:
-        # Add the repositories in /etc/apt/sources.list
-        subprocess.check_call(
-            "echo '# Kali repositories in China | Added by Katoolin4China\ndeb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\ndeb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free\n' >> /etc/apt/sources.list", shell=True)
-    except subprocess.CalledProcessError as error_output:
-        print('Call error: {0}'.format(error_output))
 
 
 def loop_repo_setting():
